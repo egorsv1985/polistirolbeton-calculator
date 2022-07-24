@@ -25,6 +25,7 @@
 	// .main__wrap
 	&__wrap {
 		@include flex (space-between, $flex-wrap: wrap);
+		gap: 40px;
 		
 	}
 	// .main__content
