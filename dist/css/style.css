@@ -29,6 +29,20 @@
   font-style: normal;
 }
 @font-face {
+  font-family: OpenSans;
+  font-display: swap;
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2"), url("../fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: open;
+  font-display: swap;
+  src: url("../fonts/open-sans-bold.woff2") format("woff2"), url("../fonts/open-sans-bold.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
   font-family: Segoe UI Semibold;
   font-display: swap;
   src: url("../fonts/Segoe UI Semibold.woff2") format("woff2"), url("../fonts/Segoe UI Semibold.woff") format("woff");
@@ -39,6 +53,27 @@
   font-family: Segoe UI;
   font-display: swap;
   src: url("../fonts/Segoe UI.woff2") format("woff2"), url("../fonts/Segoe UI.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: TrebuchetMS;
+  font-display: swap;
+  src: url("../fonts/TrebuchetMS-Bold.woff2") format("woff2"), url("../fonts/TrebuchetMS-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: TrebuchetMS;
+  font-display: swap;
+  src: url("../fonts/TrebuchetMS.woff2") format("woff2"), url("../fonts/TrebuchetMS.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Verdana;
+  font-display: swap;
+  src: url("../fonts/Verdana.woff2") format("woff2"), url("../fonts/Verdana.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
@@ -118,8 +153,8 @@ body {
 body {
   color: #262626;
   line-height: 1;
-  font-family: "Circe";
-  font-size: 0.875rem;
+  font-family: "Segoe UI";
+  font-size: 0.75rem;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -130,7 +165,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "Circe";
+  font-family: "Segoe UI";
   font-size: inherit;
 }
 
@@ -201,151 +236,6 @@ h6 {
   padding: 0 0.9375rem;
 }
 
-.form {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-}
-@media only screen and (max-width: 1160px) {
-  .form {
-    flex-direction: column;
-  }
-}
-.form__wrap {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 76%;
-  padding-bottom: 20px;
-}
-.form__input {
-  border-bottom: 1px solid #fff;
-  font-family: "TenorSans";
-  font-weight: 400;
-  font-size: 40px;
-  line-height: 47px;
-  color: #fff;
-  width: 100%;
-  height: 80px;
-  position: relative;
-  caret-color: #dc7474;
-  background-color: transparent;
-}
-@media only screen and (max-width: 1023px) {
-  .form__input {
-    font-size: 30px;
-    line-height: 35px;
-    height: 60px;
-  }
-}
-@media only screen and (max-width: 575px) {
-  .form__input {
-    font-size: 20px;
-    line-height: 24px;
-  }
-}
-.form__input:focus-visible, .form__input:focus, .form__input:active {
-  outline: none;
-  border-bottom: 1px solid #fff;
-}
-.form__input:focus ~ .form__label, .form__input:valid ~ .form__label {
-  top: -30px;
-}
-@media only screen and (max-width: 1023px) {
-  .form__input:focus ~ .form__label, .form__input:valid ~ .form__label {
-    top: -20px;
-  }
-}
-@media only screen and (max-width: 575px) {
-  .form__input:focus ~ .form__label, .form__input:valid ~ .form__label {
-    top: -10px;
-  }
-}
-.form__label {
-  font-family: "TenorSans";
-  font-weight: 400;
-  font-size: 40px;
-  line-height: 47px;
-  color: #fff;
-  position: absolute;
-  top: 12px;
-  left: 0;
-  transition: 0.5s;
-}
-@media only screen and (max-width: 1023px) {
-  .form__label {
-    font-size: 30px;
-    line-height: 35px;
-  }
-}
-@media only screen and (max-width: 575px) {
-  .form__label {
-    font-size: 20px;
-    line-height: 24px;
-  }
-}
-.form__input::placeholder {
-  font-family: "TenorSans";
-  font-weight: 400;
-  font-size: 40px;
-  line-height: 47px;
-  color: #fff;
-}
-@media only screen and (max-width: 1023px) {
-  .form__input::placeholder {
-    font-size: 30px;
-    line-height: 35px;
-  }
-}
-@media only screen and (max-width: 575px) {
-  .form__input::placeholder {
-    font-size: 20px;
-    line-height: 24px;
-  }
-}
-.form__btn {
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(225deg, #de7d7d 0%, #d75858 100%);
-  font-family: "TenorSans";
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 120%;
-  text-align: center;
-  text-transform: uppercase;
-  color: #fff;
-}
-@media only screen and (max-width: 1023px) {
-  .form__btn {
-    width: 190px;
-    height: 190px;
-    font-size: 16px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .form__btn {
-    width: 150px;
-    height: 150px;
-    font-size: 14px;
-  }
-}
-@media only screen and (max-width: 575px) {
-  .form__btn {
-    width: 100px;
-    height: 100px;
-    padding: 10px;
-    font-size: 12px;
-  }
-}
-.form__span {
-  color: rgba(255, 255, 255, 0.4);
-}
-
 input[type=text],
 input[type=email],
 input[type=tel],
@@ -353,6 +243,148 @@ textarea {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+.checkbox {
+  position: relative;
+  padding: 6px 0 5px 40px;
+}
+.checkbox__input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.checkbox__input:checked + .checkbox__label:before {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../img/layers/check_arrow.png");
+  background-size: 11px 9px;
+}
+.checkbox__label {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #262626;
+  letter-spacing: 0.4px;
+}
+.checkbox__label:before {
+  width: 15px;
+  height: 15px;
+  content: "";
+  display: block;
+  box-shadow: inset 0px 0 4px 1px rgba(0, 0, 0, 0.29);
+  background-color: #f2f2f2;
+  border: 1px solid #999a9a;
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  transform: translateY(-50%);
+}
+.spollers__box-title._spoller-active .spollers__title::before {
+  transform: translateY(-50%) rotate(180deg);
+}
+._spoller-init .spollers__box-title__title {
+  cursor: pointer;
+}
+._spoller-init .spollers__box-title__title::before {
+  transition: transform 0.5s ease 0s;
+}
+.spollers__box-subtitle._spoller-active .spollers__subtitle::before {
+  transform: translateY(-50%) rotate(180deg);
+}
+._spoller-init .spollers__box-subtitle__subtitle {
+  cursor: pointer;
+}
+._spoller-init .spollers__box-subtitle__subtitle::before {
+  transition: transform 0.5s ease 0s;
+}
+.spollers__body {
+  position: relative;
+}
+.spollers__box {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0 5px;
+}
+.spollers__box-title {
+  width: 100%;
+  cursor: pointer;
+  background-color: rgba(53, 65, 76, 0.14);
+  display: flex;
+  align-items: center;
+  padding: 10px 0 10px 10px;
+}
+.spollers__box-title--notbg {
+  background-color: transparent;
+}
+.spollers__title {
+  font-family: "Segoe UI Semibold";
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #262626;
+  letter-spacing: 0.4px;
+}
+.spollers__title, .spollers__subtitle {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+}
+.spollers__title::before, .spollers__subtitle::before {
+  content: "";
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../img/layers/arrow.png");
+  width: 12px;
+  height: 7px;
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  transform: translateY(-50%);
+  transition: all 0.3s ease 0s;
+}
+.spollers__box-subtitle {
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 2px 0 8px 40px;
+}
+.spollers__subtitle {
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: #262626;
+  letter-spacing: 0.4px;
+  max-width: 440px;
+}
+.spollers__subtitle::before {
+  right: -40px;
+}
+.spollers__subbody {
+  padding-left: 20px;
+}
+.spollers__list {
+  padding-left: 40px;
+}
+.spollers__body-item:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.spollers__list-item:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.spollers__list-item:nth-child(odd) {
+  background-color: #fff;
 }
 
 .container {

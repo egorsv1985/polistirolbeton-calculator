@@ -20,8 +20,8 @@
 
 
 .container {
-  max-width: 1266px;
-  padding: 0 10px;
+  max-width: 1200px;
+  padding: 0 30px;
   margin: 0 auto;
 
   @include media(max, lg) {

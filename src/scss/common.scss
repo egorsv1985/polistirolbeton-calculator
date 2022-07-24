@@ -1,0 +1,42 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+.title {
+  font-family: "OpenSans";
+font-size: 30px;
+line-height: 1.2;
+font-weight: 400;
+text-transform: uppercase;
+letter-spacing: 0.025em;
+color: $primaryTextColor;
+ 
+}
+
+.subtitle {
+  opacity: 0.8;
+  font-family: "OpenSans";
+font-size: 16px;
+line-height: 24px;
+font-weight: 400;
+letter-spacing: 0.025em;
+color: $primaryTextColor;
+text-align: center;
+ 
+}
+
+.text {
+ 
+ font-family: "OpenSans";
+font-size: 13px;
+line-height: 20px;
+font-weight: 400;
+letter-spacing: 0.025em;
+color: $primaryTextColor;
+&--red{
+  color: #f75445;
+}
+  
+}
+
+.span {
+}
+

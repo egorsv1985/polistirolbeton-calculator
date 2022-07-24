@@ -19,6 +19,7 @@ $fontSize: rem(12); // где 12(px) - размер шрифта по умолч
 // Основные цвета
 $mainColor: #262626; // Основной цвет
 $primaryColor: #fff; //Основной белый цвет
+$primaryTextColor: #44424b; //Основной  цвет текста
 
 $accentColor: rgba(53, 65, 76, 0.14); // Дополнительный цвет
 $bgColor: #f9f9f9; // Фон четного спойлера
@@ -146,7 +147,9 @@ body {
 // Подключение базовых стилей, шаблонов (заготовок) и вспомагательных классов
 // Для подключения/отключения конкретных стилей смотри base.scss
 @import "base";
+@import "common";
 
 // sections
 
 @import "./sections/layers";
+@import "./sections/main";
