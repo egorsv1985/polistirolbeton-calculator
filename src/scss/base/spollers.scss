@@ -163,6 +163,7 @@ max-width: 440px;
   }
   // .spollers__list
   &__list {
+    padding-left: 40px;
   }
   // .spollers__list-item
   &__list-item {
@@ -183,5 +184,14 @@ max-width: 440px;
  
   &:nth-child(even) {
     background-color: $bgColor;
+  }
+}
+.spollers__list-item {
+ 
+  &:nth-child(even) {
+    background-color: $bgColor;
+  }
+  &:nth-child(odd) {
+    background-color: #fff;
   }
 }
