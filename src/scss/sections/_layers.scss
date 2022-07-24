@@ -1,0 +1,73 @@
+.layers {
+  padding: 25px 0;
+  // .layers__form
+  &__form {
+    @include flex(center, center);
+  }
+  // .layers__spollers-box
+  &__spollers-box {
+  }
+  // .layers__subspollers
+  &__subspollers {
+    &:nth-child(odd) {
+      background-color: $bgColor;
+    }
+  }
+  .container {
+  }
+  .form {
+  }
+  .spollers {
+    // .spollers__item
+    &__subitem {
+    }
+    &__box-title {
+      width: 100%;
+      background-color: $accentColor;
+      padding: 8px 0;
+    }
+    // .spollers__title
+    &__title {
+      font-size: 12px;
+      line-height: 1.2;
+      font-weight: 600;
+      color: $mainColor;
+
+      position: relative;
+      display: inline-block;
+      &::before {
+        @include pseudo;
+        @include wh(12px, 7px);
+        @include background(url("@img/layers/arrow.png"));
+        @include pos(absolute, $top: 50%, $right: -20px);
+        transform: translateY(-50%);
+      }
+    }
+    // .spollers__body
+    &__body {
+      padding-left: 40px;
+    }
+    // .spollers__wrapper
+    &__wrapper {
+    }
+    // .spollers__list
+    &__list {
+    }
+    // .spollers__text
+    &__text {
+      font-size: 12px;
+      line-height: 1.2;
+      font-weight: 400;
+      color: $mainColor;
+    }
+    // .spollers__box-check
+    &__box-check {
+    }
+    // .spollers__label
+    &__label {
+    }
+  }
+
+  .label {
+  }
+}

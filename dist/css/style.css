@@ -1,0 +1,367 @@
+@charset "UTF-8";
+/* -----------------------------------------------------------------
+                       @media
+1-ый параметр $min-max принимает 3 аргумента min, max, min-max.
+   min       - для mobil @media
+   max       - для dectop @media
+   min-max   - для промежутка между mobil-dectop @media
+2-ой параметр $breakpoint_1 принимает 1-ин аргумент.
+   ключ      - хранятся в созданной карте $grid_breakpoints(xxl, xl, lg, md , sm...)
+3-ий параметр $breakpoint_2 принимает 1-ин аргумент, является не обязательным параметром.
+   ключ      - хранятся в созданной карте $grid_breakpoints(xxl, xl, lg, md , sm...) нужен для 1-ого параметра 3 аргумента.
+ Дополнение:
+   map-has-key  - Нужен для проверки ключа в карте, если ключа указанного нет то условие не выполняется.
+   map-get      - Нужен для использование ключей из карты.
+Пример:
+   @include media(max, xxl) { display: none;}
+   @include media(min, xxl) { display: none;}
+   @include media(min-max, mn-lg, mx-xxl) { display: none;}
+Одиночные брекпоинты:
+   @include media(max, 870px,) { display: none;}
+   @include media(min, 870px,) { display: none;}
+   @include media(min-max, 870px, 1000px) { display: none;}
+--------------------------------------------------------------------*/
+@font-face {
+  font-family: icons;
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Segoe UI Semibold;
+  font-display: swap;
+  src: url("../fonts/Segoe UI Semibold.woff2") format("woff2"), url("../fonts/Segoe UI Semibold.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Segoe UI;
+  font-display: swap;
+  src: url("../fonts/Segoe UI.woff2") format("woff2"), url("../fonts/Segoe UI.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+[class*=_icon-]:before {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class*=_icon-]:before {
+  display: block;
+}
+
+._icon-cart:before {
+  content: "\e900";
+}
+
+._icon-check:before {
+  content: "\e901";
+}
+
+._icon-delet:before {
+  content: "\e902";
+}
+
+._icon-instagram:before {
+  content: "\e903";
+}
+
+._icon-logo:before {
+  content: "\e904";
+}
+
+._icon-plus:before {
+  content: "\e905";
+}
+
+._icon-search:before {
+  content: "\e906";
+}
+
+._icon-youtube:before {
+  content: "\e907";
+}
+
+._icon-telegram:before {
+  content: "\e908";
+}
+
+._icon-arrow:before {
+  content: "\e909";
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+}
+
+body {
+  color: #262626;
+  line-height: 1;
+  font-family: "Circe";
+  font-size: 0.875rem;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button,
+textarea {
+  font-family: "Circe";
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.lock body {
+  overflow: hidden;
+  touch-action: none;
+}
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.wrapper > main {
+  flex: 1 1 auto;
+}
+.wrapper > * {
+  min-width: 0;
+}
+
+/*
+(i) Стили будут применяться ко 
+всем классам содержащим *__container
+Например header__container, main__container и т.д.
+Снипет (HTML): cnt
+*/
+[class*=__container] {
+  max-width: 76.25rem;
+  box-sizing: content-box;
+  margin: 0 auto;
+  padding: 0 0.9375rem;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+@media only screen and (max-width: 1160px) {
+  .form {
+    flex-direction: column;
+  }
+}
+.form__wrap {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 76%;
+  padding-bottom: 20px;
+}
+.form__input {
+  border-bottom: 1px solid #fff;
+  font-family: "TenorSans";
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 47px;
+  color: #fff;
+  width: 100%;
+  height: 80px;
+  position: relative;
+  caret-color: #dc7474;
+  background-color: transparent;
+}
+@media only screen and (max-width: 1023px) {
+  .form__input {
+    font-size: 30px;
+    line-height: 35px;
+    height: 60px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .form__input {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+.form__input:focus-visible, .form__input:focus, .form__input:active {
+  outline: none;
+  border-bottom: 1px solid #fff;
+}
+.form__input:focus ~ .form__label, .form__input:valid ~ .form__label {
+  top: -30px;
+}
+@media only screen and (max-width: 1023px) {
+  .form__input:focus ~ .form__label, .form__input:valid ~ .form__label {
+    top: -20px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .form__input:focus ~ .form__label, .form__input:valid ~ .form__label {
+    top: -10px;
+  }
+}
+.form__label {
+  font-family: "TenorSans";
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 47px;
+  color: #fff;
+  position: absolute;
+  top: 12px;
+  left: 0;
+  transition: 0.5s;
+}
+@media only screen and (max-width: 1023px) {
+  .form__label {
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .form__label {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+.form__input::placeholder {
+  font-family: "TenorSans";
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 47px;
+  color: #fff;
+}
+@media only screen and (max-width: 1023px) {
+  .form__input::placeholder {
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .form__input::placeholder {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+.form__btn {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(225deg, #de7d7d 0%, #d75858 100%);
+  font-family: "TenorSans";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+@media only screen and (max-width: 1023px) {
+  .form__btn {
+    width: 190px;
+    height: 190px;
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .form__btn {
+    width: 150px;
+    height: 150px;
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .form__btn {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    font-size: 12px;
+  }
+}
+.form__span {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.container {
+  max-width: 1266px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 1023px) {
+  .container {
+    padding: 0 20px;
+  }
+}
