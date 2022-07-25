@@ -1,0 +1,75 @@
+.steps {
+  padding: 20px 0;
+  // .steps__list
+  &__list {
+    @include flex(space-between, center, wrap);
+	margin: 0 auto;
+	max-width: 975px;
+	gap: 20px;
+  }
+  // .steps__item
+  &__item {
+	@include flex(center, center, $flex-direction: column);
+	gap: 14px;
+
+	
+  }
+  
+
+  // .steps__text
+  &__text {
+    font-family: "Segoe UI Semibold";
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: $primaryTextColor;
+    opacity: 0.6;
+    &--active {
+      opacity: 1;
+    }
+  }
+  // .steps__number
+  &__number {
+    @include flex(center, center);
+    @include wh(30px);
+    border-radius: 50%;
+    background-color: #e0dede;
+
+    font-family: "Trebuchet MS Bold";
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: $primaryTextColor;
+    opacity: 0.7;
+	position: relative;
+    
+	&::before{
+		@include pseudo;
+		@include wh(480%, 2px);
+		
+		background-color:#ebeaea;
+		@include pos(absolute, $top:50%, $left:-380%);
+		transform: translateY(-50%);
+		z-index: -1;
+	}
+	&::after{
+		@include pseudo;
+		@include wh(480%, 2px);
+		
+		background-color:#ebeaea;
+		@include pos(absolute, $top:50%, $right:-500%);
+		transform: translateY(-50%);
+		z-index: -1;
+
+	}
+	&--active {
+		opacity: 1;
+		background-color: #35414c;
+		color: $primaryColor;
+		&::before{
+		  background-color: #7e858c;
+		  
+		}
+	  }
+  }
+}
