@@ -1,6 +1,37 @@
 //<FORM>
 // Снипет (HTML):
-
+.form {
+  // .form__submit
+  &__submit {
+    @include flex(center, center);
+    align-self: flex-end;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 144px;
+    height: 31px;
+    border: 1px solid #9d9b9c;
+    opacity: 0.7;
+    font-family: "Verdana";
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    color: $primaryTextColor;
+    background-color: transparent;
+    &:active {
+      background-color: #f75445;
+    }
+    &:hover {
+      color: $primaryColor;
+    }
+    &:active,
+    &:hover {
+      opacity: 1;
+      color: $primaryColor;
+    }
+  }
+}
 
 //</FORM>
 

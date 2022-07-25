@@ -9,6 +9,28 @@ text-transform: uppercase;
 letter-spacing: 0.025em;
 text-align: center;
 color: $primaryTextColor;
+position: relative;
+&--left{
+  align-self:flex-start;
+}
+&--location{
+  &::before{
+    @include pseudo;
+    @include background(url("@img/map/location.png"));
+    @include wh(22px, 30px);
+    @include pos(absolute, $top: 50%, $left:-45px);
+    transform: translateY(-50%);
+  }
+}
+&--climate{
+  &::after{
+    @include pseudo;
+    @include background(url("@img/map/climate.png"));
+    @include wh(22px, 30px);
+    @include pos(absolute, $top: 50%, $left:-45px);
+    transform: translateY(-50%);
+  }
+}
  
 }
 
