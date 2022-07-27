@@ -63,10 +63,10 @@
       }
     },
     l = (e, l = 500) => (e.hidden ? s(e, l) : t(e, l)),
-    c = !0,
-    a = (e = 500) => {
+    a = !0,
+    c = (e = 500) => {
       let t = document.querySelector("body");
-      if (c) {
+      if (a) {
         let s = document.querySelectorAll("[data-lp]");
         setTimeout(() => {
           for (let e = 0; e < s.length; e++) {
@@ -75,15 +75,15 @@
           (t.style.paddingRight = "0px"),
             document.documentElement.classList.remove("lock");
         }, e),
-          (c = !1),
+          (a = !1),
           setTimeout(function () {
-            c = !0;
+            a = !0;
           }, e);
       }
     },
     i = (e = 500) => {
       let t = document.querySelector("body");
-      if (c) {
+      if (a) {
         let s = document.querySelectorAll("[data-lp]");
         for (let e = 0; e < s.length; e++) {
           s[e].style.paddingRight =
@@ -96,13 +96,13 @@
           document.querySelector(".wrapper").offsetWidth +
           "px"),
           document.documentElement.classList.add("lock"),
-          (c = !1),
+          (a = !1),
           setTimeout(function () {
-            c = !0;
+            a = !0;
           }, e);
       }
     };
-  function n(e, t) {
+  function o(e, t) {
     const s = Array.from(e).filter(function (e, s, l) {
       if (e.dataset[t]) return e.dataset[t].split(",")[0];
     });
@@ -110,9 +110,9 @@
       const e = [];
       s.forEach((s) => {
         const l = {},
-          c = s.dataset[t].split(",");
-        (l.value = c[0]),
-          (l.type = c[1] ? c[1].trim() : "max"),
+          a = s.dataset[t].split(",");
+        (l.value = a[0]),
+          (l.type = a[1] ? a[1].trim() : "max"),
           (l.item = s),
           e.push(l);
       });
@@ -126,20 +126,20 @@
           return s.indexOf(e) === t;
         });
       })(l);
-      const c = [];
+      const a = [];
       if (l.length)
         return (
           l.forEach((t) => {
             const s = t.split(","),
               l = s[1],
-              a = s[2],
+              c = s[2],
               i = window.matchMedia(s[0]),
-              n = e.filter(function (e) {
-                if (e.value === l && e.type === a) return !0;
+              o = e.filter(function (e) {
+                if (e.value === l && e.type === c) return !0;
               });
-            c.push({ itemsArray: n, matchMedia: i });
+            a.push({ itemsArray: o, matchMedia: i });
           }),
-          c
+          a
         );
     }
   }
@@ -147,14 +147,14 @@
     let e = document.querySelector(".burger");
     e &&
       e.addEventListener("click", function (e) {
-        c &&
+        a &&
           (((e = 500) => {
-            document.documentElement.classList.contains("lock") ? a(e) : i(e);
+            document.documentElement.classList.contains("lock") ? c(e) : i(e);
           })(),
           document.documentElement.classList.toggle("open"));
       });
   })();
-  let o = {
+  let n = {
     getErrors(e) {
       let t = 0,
         s = e.querySelectorAll("*[data-required]");
@@ -207,7 +207,7 @@
             const t = s[e];
             t.parentElement.classList.remove("_form-focus"),
               t.classList.remove("_form-focus"),
-              o.removeError(t);
+              n.removeError(t);
           }
           let l = t.querySelectorAll(".checkbox__input");
           if (l.length > 0)
@@ -374,9 +374,9 @@
                   ).dataset.selectId
                 }"]`
               ),
-          c = this.getSelectElement(l).originalSelect;
+          a = this.getSelectElement(l).originalSelect;
         if ("click" === s) {
-          if (!c.disabled)
+          if (!a.disabled)
             if (
               t.closest(this.getSelectClass(this.selectClasses.classSelectTag))
             ) {
@@ -386,7 +386,7 @@
                 s = document.querySelector(
                   `.${this.selectClasses.classSelect}[data-id="${e.dataset.selectId}"] .select__option[data-value="${e.dataset.value}"]`
                 );
-              this.optionAction(l, c, s);
+              this.optionAction(l, a, s);
             } else if (
               t.closest(
                 this.getSelectClass(this.selectClasses.classSelectTitle)
@@ -401,7 +401,7 @@
               const e = t.closest(
                 this.getSelectClass(this.selectClasses.classSelectOption)
               );
-              this.optionAction(l, c, e);
+              this.optionAction(l, a, e);
             }
         } else
           "focusin" === s || "focusout" === s
@@ -527,20 +527,20 @@
         s = e.dataset.scroll ? `style="max-height:${e.dataset.scroll}px"` : "",
         l = Array.from(e.options);
       if (l.length > 0) {
-        let c = "";
+        let a = "";
         return (
           ((this.getSelectPlaceholder(e) &&
             !this.getSelectPlaceholder(e).show) ||
             e.multiple) &&
             (l = l.filter((e) => e.value)),
-          (c += t
+          (a += t
             ? `<div ${t} ${s} class="${this.selectClasses.classSelectOptionsScroll}">`
             : ""),
           l.forEach((t) => {
-            c += this.getOption(t, e);
+            a += this.getOption(t, e);
           }),
-          (c += t ? "</div>" : ""),
-          c
+          (a += t ? "</div>" : ""),
+          a
         );
       }
     }
@@ -550,17 +550,17 @@
             ? ` ${this.selectClasses.classSelectOptionSelected}`
             : "",
         l = e.selected && !t.hasAttribute("data-show-selected") ? "hidden" : "",
-        c = e.dataset.class ? ` ${e.dataset.class}` : "",
-        a = !!e.dataset.href && e.dataset.href,
+        a = e.dataset.class ? ` ${e.dataset.class}` : "",
+        c = !!e.dataset.href && e.dataset.href,
         i = e.hasAttribute("data-href-blank") ? 'target="_blank"' : "";
-      let n = "";
+      let o = "";
       return (
-        (n += a
-          ? `<a ${i} ${l} href="${a}" data-value="${e.value}" class="${this.selectClasses.classSelectOption}${c}${s}">`
-          : `<button ${l} class="${this.selectClasses.classSelectOption}${c}${s}" data-value="${e.value}" type="button">`),
-        (n += this.getSelectElementContent(e)),
-        (n += a ? "</a>" : "</button>"),
-        n
+        (o += c
+          ? `<a ${i} ${l} href="${c}" data-value="${e.value}" class="${this.selectClasses.classSelectOption}${a}${s}">`
+          : `<button ${l} class="${this.selectClasses.classSelectOption}${a}${s}" data-value="${e.value}" type="button">`),
+        (o += this.getSelectElementContent(e)),
+        (o += c ? "</a>" : "</button>"),
+        o
       );
     }
     setOptions(e, t) {
@@ -608,7 +608,7 @@
     }
     setSelectChange(e) {
       if (
-        (e.hasAttribute("data-validate") && o.validateInput(e),
+        (e.hasAttribute("data-validate") && n.validateInput(e),
         e.hasAttribute("data-submit") && e.value)
       ) {
         let t = document.createElement("button");
@@ -641,14 +641,14 @@
           this.selectClasses.classSelectOptions
         ).selectElement,
         l = s.querySelectorAll(`.${this.selectClasses.classSelectOption}`),
-        c = this;
+        a = this;
       t.addEventListener("input", function () {
         l.forEach((e) => {
           e.textContent.toUpperCase().indexOf(t.value.toUpperCase()) >= 0
             ? (e.hidden = !1)
             : (e.hidden = !0);
         }),
-          !0 === s.hidden && c.selectAction(e);
+          !0 === s.hidden && a.selectAction(e);
       });
     }
     selectCallback(e, t) {
@@ -672,18 +672,18 @@
         const s = Array.from(e).filter(function (e, t, s) {
           return !e.dataset.spollers.split(",")[0];
         });
-        s.length && a(s);
-        let c = n(e, "spollers");
-        function a(e, t = !1) {
+        s.length && c(s);
+        let a = o(e, "spollers");
+        function c(e, t = !1) {
           e.forEach((e) => {
             (e = t ? e.item : e),
               t.matches || !t
                 ? (e.classList.add("_spoller-init"),
                   i(e),
-                  e.addEventListener("click", o))
+                  e.addEventListener("click", n))
                 : (e.classList.remove("_spoller-init"),
                   i(e, !1),
-                  e.removeEventListener("click", o));
+                  e.removeEventListener("click", n));
           });
         }
         function i(e, t = !0) {
@@ -701,14 +701,14 @@
                   (e.nextElementSibling.hidden = !1));
             }));
         }
-        function o(e) {
+        function n(e) {
           const t = e.target;
           if (t.closest("[data-spoller]")) {
             const s = t.closest("[data-spoller]"),
-              c = s.closest("[data-spollers]"),
-              a = !!c.hasAttribute("data-one-spoller");
-            c.querySelectorAll("._slide").length ||
-              (a && !s.classList.contains("_spoller-active") && r(c),
+              a = s.closest("[data-spollers]"),
+              c = !!a.hasAttribute("data-one-spoller");
+            a.querySelectorAll("._slide").length ||
+              (c && !s.classList.contains("_spoller-active") && r(a),
               s.classList.toggle("_spoller-active"),
               l(s.nextElementSibling, 500)),
               e.preventDefault();
@@ -720,14 +720,125 @@
             (s.classList.remove("_spoller-active"),
             t(s.nextElementSibling, 500));
         }
-        c &&
-          c.length &&
-          c.forEach((e) => {
+        a &&
+          a.length &&
+          a.forEach((e) => {
+            e.matchMedia.addEventListener("change", function () {
+              c(e.itemsArray, e.matchMedia);
+            }),
+              c(e.itemsArray, e.matchMedia);
+          });
+      }
+    })(),
+    (function () {
+      const e = document.querySelectorAll("[data-tabs]");
+      let l = [];
+      if (e.length > 0) {
+        const t = (function () {
+          if (location.hash) return location.hash.replace("#", "");
+        })();
+        t && t.startsWith("tab-") && (l = t.replace("tab-", "").split("-")),
+          e.forEach((e, t) => {
+            e.classList.add("_tab-init"),
+              e.setAttribute("data-tabs-index", t),
+              e.addEventListener("click", i),
+              (function (e) {
+                let t = e.querySelectorAll("[data-tabs-titles]>*"),
+                  s = e.querySelectorAll("[data-tabs-body]>*");
+                const a = e.dataset.tabsIndex,
+                  c = l[0] == a;
+                if (c) {
+                  const t = e.querySelector("[data-tabs-titles]>._tab-active");
+                  t && t.classList.remove("_tab-active");
+                }
+                s.length &&
+                  ((s = Array.from(s).filter(
+                    (t) => t.closest("[data-tabs]") === e
+                  )),
+                  (t = Array.from(t).filter(
+                    (t) => t.closest("[data-tabs]") === e
+                  )),
+                  s.forEach((e, s) => {
+                    t[s].setAttribute("data-tabs-title", ""),
+                      e.setAttribute("data-tabs-item", ""),
+                      c && s == l[1] && t[s].classList.add("_tab-active"),
+                      (e.hidden = !t[s].classList.contains("_tab-active"));
+                  }));
+              })(e);
+          });
+        let s = o(e, "tabs");
+        s &&
+          s.length &&
+          s.forEach((e) => {
             e.matchMedia.addEventListener("change", function () {
               a(e.itemsArray, e.matchMedia);
             }),
               a(e.itemsArray, e.matchMedia);
           });
+      }
+      function a(e, t) {
+        e.forEach((e) => {
+          let s = (e = e.item).querySelector("[data-tabs-titles]"),
+            l = e.querySelectorAll("[data-tabs-title]"),
+            a = e.querySelector("[data-tabs-body]"),
+            c = e.querySelectorAll("[data-tabs-item]");
+          (l = Array.from(l).filter((t) => t.closest("[data-tabs]") === e)),
+            (c = Array.from(c).filter((t) => t.closest("[data-tabs]") === e)),
+            c.forEach((c, i) => {
+              t.matches
+                ? (a.append(l[i]), a.append(c), e.classList.add("_tab-spoller"))
+                : (s.append(l[i]), e.classList.remove("_tab-spoller"));
+            });
+        });
+      }
+      function c(e) {
+        let l = e.querySelectorAll("[data-tabs-title]"),
+          a = e.querySelectorAll("[data-tabs-item]");
+        const c = e.dataset.tabsIndex;
+        const i = (function (e) {
+          if (e.hasAttribute("data-tabs-animate"))
+            return e.dataset.tabsAnimate > 0
+              ? Number(e.dataset.tabsAnimate)
+              : 500;
+        })(e);
+        if (a.length > 0) {
+          const o = e.hasAttribute("data-tabs-hash");
+          (a = Array.from(a).filter((t) => t.closest("[data-tabs]") === e)),
+            (l = Array.from(l).filter((t) => t.closest("[data-tabs]") === e)),
+            a.forEach((e, a) => {
+              var n;
+              l[a].classList.contains("_tab-active")
+                ? (i ? s(e, i) : (e.hidden = !1),
+                  o &&
+                    !e.closest(".popup") &&
+                    ((n = (n = `tab-${c}-${a}`)
+                      ? `#${n}`
+                      : window.location.href.split("#")[0]),
+                    history.pushState("", "", n)))
+                : i
+                ? t(e, i)
+                : (e.hidden = !0);
+            });
+        }
+      }
+      function i(e) {
+        const t = e.target;
+        if (t.closest("[data-tabs-title]")) {
+          const s = t.closest("[data-tabs-title]"),
+            l = s.closest("[data-tabs]");
+          if (
+            !s.classList.contains("_tab-active") &&
+            !l.querySelector("._slide")
+          ) {
+            let e = l.querySelectorAll("[data-tabs-title]._tab-active");
+            e.length &&
+              (e = Array.from(e).filter((e) => e.closest("[data-tabs]") === l)),
+              e.length && e[0].classList.remove("_tab-active"),
+              s.classList.add("_tab-active"),
+              c(l);
+          }
+          e.preventDefault();
+        }
       }
     })();
 })();
