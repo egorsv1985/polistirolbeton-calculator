@@ -31,7 +31,15 @@ position: relative;
     transform: translateY(-50%);
   }
 }
- 
+&--type{
+  &::after{
+    @include pseudo;
+    @include background(url("@img/construction/architecture.png"));
+    @include wh(31px, 24px);
+    @include pos(absolute, $top: 50%, $left:-45px);
+    transform: translateY(-50%);
+  }
+}
 }
 
 .subtitle {
@@ -43,6 +51,17 @@ font-weight: 400;
 letter-spacing: 0.025em;
 color: $primaryTextColor;
 text-align: center;
+&--bold{
+  font-weight: 600;
+}
+&--small{
+  font-size: 12px;
+line-height: 15px;
+
+}
+&--left{
+  align-self:flex-start;
+}
  
 }
 
@@ -54,6 +73,10 @@ line-height: 20px;
 font-weight: 400;
 letter-spacing: 0.025em;
 color: $primaryTextColor;
+&--small{
+  font-size: 12px;
+line-height: 15px;
+}
 &--red{
   color: #f75445;
 }

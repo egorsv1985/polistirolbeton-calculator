@@ -1,42 +1,157 @@
 .construction {
-	// .construction__form
-	&__form {
-		width: 1140px;
-height: 461px;
-background-color: #ffffff;
-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.2);
-border-radius: 2px;
+  // .construction__form
+  &__form {
+    padding: 30px 30px 30px 70px;
+    @include flex($flex-direction: column);
+    gap: 25px;
+
+    background-color: #ffffff;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+  }
+  // .construction__title
+  &__title {
+    font-family: "Verdana";
+    font-size: 14px;
+
+    color: #63685f;
+  }
+  // .construction__wrapper
+  &__wrapper {
+    @include flex($flex-direction: column);
+    gap: 20px;
+  }
+  // .construction__box-content
+  &__box-content {
+    @include flex($flex-direction: column);
+    gap: 20px;
+
+    &:nth-child(2) {
+      max-width: 700px;
+    }
+  }
+  // .construction__subtitle
+  &__subtitle {
+    font-family: "Segoe UI";
+    max-width: 130px;
+  }
+  // .construction__list
+  &__list {
+    @include flex(space-between, center, wrap);
+
+    padding: 0 90px 0 50px;
+	&:last-child{
+		.construction__item{
+			height: 120px;
+		}
 	}
-	// .construction__wrapper
-	&__wrapper {}
-	// .construction__box-content
-	&__box-content {}
-	// .construction__subtitle
-	&__subtitle {}
-	// .construction__list
-	&__list {}
-	// .construction__item
-	&__item {}
-	// .construction__radio-button
-	&__radio-button {}
-	// .construction__img
-	&__img {}
-	// .construction__text
-	&__text {}
-	// .construction__span
-	&__span {}
-	// .construction__select
-	&__select {}
-	// .construction__btn-group
-	&__btn-group {}
-	// .construction__btn
-	&__btn {}
+  }
+  // .construction__item
+  &__item {
+	cursor: pointer;
+    @include flex($align-items:center, $flex-direction: column);
+    position: relative;
+    gap: 10px;
+    width: 172px;
+
+    height: 99px;
+    padding: 10px 0;
+	
+    &:hover {
+      border: 1px solid #b9b9b9;
+      .construction__label {
+        &::before {
+			cursor: pointer;
+          @include wh(17px);
+          border-radius: 50%;
+          @include pseudo;
+
+          border: 1px solid #b9b9b9;
+		  @include pos(absolute, $top: 5px, $right: 8px);
+        }
+      }
+    }
+    &:focus {
+      border: none;
+      background-color: #ffffff;
+      box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+      .construction__label {
+		cursor: pointer;
+        &::before {
+          border: 1px solid #35414c;
+		  background-color: #35414c;
+		  
+          @include wh(17px);
+          border-radius: 50%;
+          @include pseudo;
+
+          @include pos(absolute, $top: 5px, $right: 8px);
+        }
+		&::after{
+			@include pseudo;
+			@include background (url("@img/construction/check.png"));
+			@include wh(9px, 8px);
+			@include pos(absolute, $top: 9px, $right: 12px);
+		}
+      }
+    }
+  }
+
+  // .construction__img
+  &__img {
+  }
+
+  // .construction__radio
+  &__radio {
+    display: none;
+
+  }
+  &__label ~ .construction__radio:checked{
+	&::before {
+		border: 1px solid #35414c;
+		background-color: #35414c;
+		
+		@include wh(17px);
+		border-radius: 50%;
+		@include pseudo;
+
+		@include pos(absolute, $top: 5px, $right: 8px);
+	  }
+	  &::after{
+		  @include pseudo;
+		  @include background (url("@img/construction/check.png"));
+		  @include wh(9px, 8px);
+		  @include pos(absolute, $top: 9px, $right: 12px);
+	  }
+  } 
+  
+
+  // .construction__select
+  &__select {
+  }
+  // .construction__btn-group
+  &__btn-group {
+    @include flex();
+    gap: 30px;
+    align-self: flex-end;
+  }
+  // .construction__btn
+  &__btn {
+  }
+  .select__title {
+    border: none;
+	height: 15px;
+	
+  }
+  .select__value{
+	&::before{
+		right: 0;
+	}
+  }
 }
 .container {
 }
 .contstruction {
-	// .contstruction__title
-	&__title {}
 }
 .title {
 }
@@ -47,4 +162,42 @@ border-radius: 2px;
 .subtitle {
 }
 .btn {
+}
+
+.construction {
+  // .construction__form
+  &__form {
+  }
+  // .construction__title
+  &__title {
+  }
+  // .construction__wrapper
+  &__wrapper {
+  }
+  // .construction__box-content
+  &__box-content {
+  }
+  // .construction__subtitle
+  &__subtitle {
+  }
+  // .construction__list
+  &__list {
+  }
+  // .construction__item
+  &__item {
+  }
+
+  // .construction__img
+  &__img {
+  }
+
+  // .construction__select
+  &__select {
+  }
+  // .construction__btn-group
+  &__btn-group {
+  }
+  // .construction__btn
+  &__btn {
+  }
 }
