@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220727140229">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220729194058">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -57,20 +57,20 @@
 				<div class="container">
 					<ul class="steps__list">
 						<li class="steps__item">
-							<p class="steps__text steps__text--active">Регион и город</p>
-							<span class="steps__number steps__number--active">1</span>
+							<p class="steps__text">Регион и город</p>
+							<span class="steps__number"></span>
 						</li>
 						<li class="steps__item">
 							<p class="steps__text">Тип помещения для расчета</p>
-							<span class="steps__number">2</span>
+							<span class="steps__number"></span>
 						</li>
 						<li class="steps__item">
 							<p class="steps__text">Стеновой материал для расчета</p>
-							<span class="steps__number">3</span>
+							<span class="steps__number"></span>
 						</li>
 						<li class="steps__item">
 							<p class="steps__text">Отчет по расчету</p>
-							<span class="steps__number">4</span>
+							<span class="steps__number"></span>
 						</li>
 					</ul>
 				</div>
@@ -210,123 +210,408 @@
 				<div class="container">
 					<ul class="report__list">
 						<li class="resilt__item">
-							<h2 class="report__title title">Результат теплотехнического расчёта</h2>
-							<p class="report__text text">
-								Представленный теплотехнический расчет ограждающих конструкций зданий
-								является оценочным и предназначен для предварительного выбора
-								материалов и проектирования конструкций. При разработке проекта для
-								проведения точного расчета необходимо обратиться в организацию,
-								обладающую соответствующими полномочиями и разрешениями.
-							</p>
+							<h2 class="report__title title">Подробный отчёт</h2>
 						</li>
-						<li class="resilt__item">
-							<h3 class="report__subtitle subtitle">
-								Расчет основан на российской нормативной базе:
-							</h3>
-							<ul class="report__sublist">
-								<li class="report__subitem">
-									СНиП 23-02-2003 "Тепловая защита зданий"
-								</li>
-								<li class="report__subitem">
-									СП 23-101-2004 "Проектирование тепловой защиты зданий"
-								</li>
-								<li class="report__subitem">
-									ГОСТ Р 54851—2011 "Конструкции строительные ограждающие
-									неоднородные. Расчет приведенного сопротивления теплопередаче"
-								</li>
-								<li class="report__subitem">
-									СТО 00044807-001-2006 "Теплозащитные свойства ограждающих
-									конструкций зданий"
-								</li>
-							</ul>
-						</li>
+
 						<li class="resilt__item">
 							<div class="report__grid">
-								<h3 class="report__subtitle subtitle">Выбранный стеновой материал</h3>
-								<div class="report__wrap">
-									<span class="report__span">№</span>
-									<span class="report__span">Материал</span>
-									<span class="report__span">Толщина</span>
-									<span class="report__span">λ</span>
-									<span class="report__span">R</span>
-								</div>
-								<div class="report__wrap">
-									<span class="report__span">1.</span>
-									<span class="report__span">Полистиролбетон 500 кг/м³</span>
-									<span class="report__span">Сопротивление тепловосприятию</span>
-									<span class="report__span">380</span>
-									<span class="report__span">0,14</span>
-									<span class="report__span">2,71</span>
-								</div>
-								<div class="report__wrap">
-									<span class="report__span">2.</span>
-									<span class="report__span">Вентилируемая воздушная прослойка</span>
-									<span class="report__span">Сопротивление теплоотдаче</span>
-									<span class="report__span">100</span>
-									<span class="report__span"></span>
-									<span class="report__span">0,00</span>
-								</div>
-								<h3 class="grid-wall__subtitle subtitle">
-									Основной несущий / самонесущий материал
+								<h3 class="report__subtitle subtitle">
+									Местоположение / Категория сооружения
 								</h3>
 								<div class="report__wrap">
-									<span class="report__span">
-										<img src="" alt="" class="report__img" />
-									</span>
+									<span class="report__span">Страна</span>
+									<span class="report__span">Россия</span>
+								</div>
+								<div class="report__wrap">
+									<span class="report__span">Регион</span>
+									<span class="report__span">Воронежская область</span>
+								</div>
+								<div class="report__wrap">
+									<span class="report__span">Населенный пункт</span>
+									<span class="report__span">Воронеж</span>
+								</div>
+								<div class="report__wrap">
+									<span class="report__span">Вид помещения</span>
+									<span class="report__span">Техническое помещение</span>
+								</div>
+								<div class="report__wrap">
+									<span class="report__span">Тип конструкции</span>
+									<span class="report__span">Перекрытие над холодным подвалом, сообщающимся с наружным
+										воздухом</span>
 								</div>
 							</div>
 						</li>
 						<li class="resilt__item">
-							<h2 class="report__title title">
-								краткие выводы
-							</h2>
-							<ul class="report__sublist">
-								<li class="report__subitem">
-									<img src="" alt="" class="report__img" />
-									<p class="report__text text">
-										Ограждающая конструкция удовлетворяет санитарно-гигиеническим
-										нормам по тепловой защите.
-									</p>
-								</li>
-								<li class="report__subitem">
-									<img src="" alt="" class="report__img" />
-									<p class="report__text text">
-										Ограждающая конструкция удовлетворяет нормам по тепловой защите
-										вне зависисмости от иных требований.
-									</p>
-								</li>
-								<li class="report__subitem">
-									<img src="" alt="" class="report__img" />
-									<p class="report__text text">
-										Ограждающая конструкция удовлетворяет нормам по защите от
-										переувлажнения.
-									</p>
-								</li>
-								<li class="report__subitem">
-									<img src="" alt="" class="report__img" />
-									<p class="report__text text">
-										Потери тепла через 1 м² за отопительный сезон
-										<span class="report__span">7.79</span> кВт•ч
-									</p>
-								</li>
-								<li class="report__subitem">
-									<img src="" alt="" class="report__img" />
-									<p class="report__text text">
-										Потери тепла через 1 м² за 1 час при температуре самой холодной
-										пятидневки <span class="report__span">3.21</span> кВт•ч
-									</p>
-								</li>
-								<li class="report__subitem">
-									<img src="" alt="" class="report__img" />
-									<p class="report__text text">
-										Такая тепловая защита оправдана, если энергоноситель для Вашей
-										системы отопления чрезвычайно дорог или Ваша цель - строительство
-										"пассивного" дома.
-									</p>
-								</li>
-							</ul>
+							<div class="report__grid">
+								<h3 class="report__subtitle subtitle">Климатические параметры</h3>
+								<div class="report__wrap">
+									<span class="report__span">Температура холодной пятидневки с обеспеченностью 0.92</span>
+									<span class="report__span">-25 ˚С</span>
+								</div>
+								<div class="report__wrap">
+									<span class="report__span">Продолжительность отопительного периода</span>
+									<span class="report__span">205 суток</span>
+								</div>
+								<div class="report__wrap">
+									<span class="report__span">Средняя температура воздуха отопительного периода</span>
+									<span class="report__span">-2.2 ˚С</span>
+								</div>
+								<div class="report__wrap">
+									<span class="report__span">Условия эксплуатации помещения</span>
+									<span class="report__span">Б</span>
+								</div>
+								<div class="report__wrap">
+									<span class="report__span">Количество градусо-суток отопительного периода (ГСОП)</span>
+									<span class="report__span">4551 °С•сут</span>
+								</div>
+							</div>
 						</li>
+						<li class="resilt__item">
+							<div class="report__grid">
+								<h3 class="report__subtitle subtitle">
+									Требуемое сопротивление теплопередаче
+								</h3>
+								<div class="report__wrap">
+									<span class="report__span">Санитарно-гигиенические требования [Rс]</span>
+									<span class="report__span">1.55 (м²•˚С)/Вт</span>
+								</div>
+								<div class="report__wrap">
+									<span class="report__span">Нормируемое значение поэлементных требований [Rэ]</span>
+									<span class="report__span">3.16 (м²•˚С)/Вт</span>
+								</div>
+								<div class="report__wrap">
+									<span class="report__span">Базовое значение поэлементных требований [Rт]</span>
+									<span class="report__span">3.95 (м²•˚С)/Вт</span>
+								</div>
+							</div>
+						</li>
+						<li class="report__item">
+							<div class="report__grid">
+								<h3 class="report__subtitle subtitle">
+									Слои конструкции (изнутри наружу)
+								</h3>
+								<div class="report__wrap">
+									<span class="report__span">№</span>
+									<span class="report__span">Тип</span>
+									<span class="report__span">Материал</span>
+									<span class="report__span">Толщина</span>
+									<span class="report__span">λ</span>
+									<span class="report__span">R</span>
+									<span class="report__span">Tmax</span>
+									<span class="report__span">Tmin</span>
+								</div>
 
+								<div class="report__wrap">
+									<span class="report__span">1.</span>
+									<span class="report__span">
+										<img src="" alt="" class="report__span-img" />
+									</span>
+									<span class="report__span">Полистиролбетон 500 кг/м³</span>
+									<span class="report__span">380</span>
+									<span class="report__span">0,14</span>
+									<span class="report__span">2,71</span>
+									<span class="report__span">+18,8</span>
+									<span class="report__span">-9,5</span>
+								</div>
+								<div class="report__wrap">
+									<span class="report__span"></span>
+									<span class="report__span"></span>
+									<span class="report__span">Сопротивление теплоотдаче</span>
+									<span class="report__span">Толщина</span>
+									<span class="report__span"></span>
+									<span class="report__span">0,09</span>
+									<span class="report__span">-10,0</span>
+									<span class="report__span">-10,0</span>
+								</div>
+								<div class="report__wrap">
+									<span class="report__span">2.</span>
+									<span class="report__span">
+										<img src="" alt="" class="report__span-img" />
+									</span>
+									<span class="report__span">Вентилируемая воздушная прослойка</span>
+									<span class="report__span">100</span>
+									<span class="report__span">0,00</span>
+									<span class="report__span">0,09</span>
+									<span class="report__span">-9,5</span>
+									<span class="report__span">-10,0</span>
+								</div>
+								<h3 class="report__subtitle subtitle">Полученные показатели</h3>
+								<div class="report__wrap">
+									<span class="report__span">Термическое сопротивление ограждающей конструкции [Rк]</span>
+									<span class="report__span"> 2,71 </span>
+								</div>
+								<div class="report__wrap">
+									<span class="report__span">Общее сопротивление теплопередаче ограждающей конструкции
+										[Rо]</span>
+									<span class="report__span"> 2,92 </span>
+								</div>
+								<h3 class="report__subtitle subtitle">
+									Сопротивление теплопередаче: 2.92 (м²•˚С)/Вт
+								</h3>
+								<div class="report__wrap">
+									<span class="reporT__span">Помещение</span>
+									<span class="reporT__span">Улица</span>
+								</div>
+								<div class="report__wrap">
+									<span class="reporT__span">˚C</span>
+									<span class="reporT__span">˚C</span>
+								</div>
+								<div class="reeport__wrap">
+									<span class="report__span">
+										<img src="" alt="" class="report__span-img" />
+									</span>
+								</div>
+								<div class="report__wrap">
+									<span class="reporT__span">см</span>
+								</div>
+								<div class="report__wrap">
+									<span class="reporT__span">[380мм] Полистиролбетон 250 кг/м³</span>
+									<span class="reporT__span">[100мм] Вентилируемая воздушная прослойка</span>
+								</div>
+								<div class="report__wrap">
+									<span class="reporT__span">Температура</span>
+									<span class="reporT__span">Температура «Точки росы»</span>
+									<span class="reporT__span">Зона конденсации</span>
+								</div>
+							</div>
+						</li>
+						<li class="report__item">
+							<div class="report__grid">
+								<h3 class="report__subtitle subtitle">
+									Защита от переувлажнения «Метод безразмерных величин»
+								</h3>
+								<div class="report__wrap">
+									<span class="report__span">Координата плоскости максимального увлажнения</span>
+									<span class="report__span">λ</span>
+									<span class="report__span">784,88</span>
+									<span class="report__span">мм</span>
+								</div>
+
+								<div class="report__wrap">
+									<span class="report__span">Сопротивление паропроницанию от внутренней поверхности
+										конструкции до плоскости максимального увлажнения</span>
+									<span class="report__span"> Rп(в) </span>
+									<span class="report__span">9,23</span>
+									<span class="report__span">(м²•ч•Па)/мг</span>
+								</div>
+								<div class="report__wrap">
+									<span class="report__span">Сопротивление паропроницанию от плоскости максимального
+										увлажнения до внешней поверхности конструкции</span>
+									<span class="report__span"> Rп(н) </span>
+									<span class="report__span">4,20</span>
+									<span class="report__span">(м²•ч•Па)/мг</span>
+								</div>
+								<div class="report__wrap">
+									<span class="report__span">Условие недопустимости накопления влаги в ограждающей конструкции
+										за годовой период эксплуатации</span>
+									<span class="report__span"> Rп. тр(1) </span>
+									<span class="report__span">1,23</span>
+									<span class="report__span">(м²•ч•Па)/мг</span>
+								</div>
+								<div class="report__wrap">
+									<span class="report__span">Условие ограничения влаги в ограждающей конструкции за период с
+										отрицательными среднемесячными температурами наружного
+										воздуха</span>
+									<span class="report__span"> Rп. тр(2) </span>
+									<span class="report__span">0,12</span>
+									<span class="report__span">(м²•ч•Па)/мг</span>
+								</div>
+
+								<h3 class="report__subtitle subtitle">
+									Послойный расчет защиты от переувлажнения
+								</h3>
+								<h3 class="report__subtitle subtitle">
+									Слои конструкции (изнутри наружу)
+								</h3>
+								<div class="report__wrap">
+									<span class="report__span">№</span>
+									<span class="report__span"> 2,71 </span>
+								</div>
+								<div class="report__wrap">
+									<span class="report__span">Материал</span>
+									<span class="report__span"> Толщина </span>
+									<span class="report__span"> μ </span>
+									<span class="report__span"> Rп </span>
+									<span class="report__span"> X </span>
+									<span class="report__span"> Rп(в) </span>
+									<span class="report__span"> Rп.тр(1)</span>
+									<span class="report__span"> Rп.тр(2) </span>
+								</div>
+
+								<div class="report__wrap">
+									<span class="report__span">1.</span>
+									<span class="report__span">Полистиролбетон 500 кг/м³</span>
+									<span class="report__span"> 380 </span>
+									<span class="report__span"> 0,075 </span>
+									<span class="report__span"> 5,07 </span>
+									<span class="report__span"> 255,3 </span>
+									<span class="report__span"> 3,40 </span>
+									<span class="report__span"> 0,00</span>
+									<span class="report__span"> 0,00 </span>
+								</div>
+								<div class="report__wrap">
+									<span class="report__span">2.</span>
+									<span class="report__span">Вентилируемая воздушная прослойка</span>
+
+									<span class="report__span"> 100 </span>
+									<span class="report__span"> </span>
+									<span class="report__span"> 0,00 </span>
+									<span class="report__span"> 0,0</span>
+									<span class="report__span"> 0,00 </span>
+									<span class="report__span"> 0,00</span>
+									<span class="report__span"> 0,00 </span>
+								</div>
+								<h3 class="report__subtitle subtitle">
+									Нахождение плоскости максимального увлажнения
+								</h3>
+								<div class="report__wrap">
+									<span class="reporT__span">Помещение</span>
+									<span class="reporT__span">Улица</span>
+								</div>
+
+								<div class="reeport__wrap">
+									<span class="report__span">
+										<img src="" alt="" class="report__span-img" />
+									</span>
+								</div>
+								<div class="report__wrap">
+									<span class="reporT__span">см</span>
+								</div>
+								<div class="report__wrap">
+									<span class="reporT__span">[380мм] Полистиролбетон 250 кг/м³</span>
+									<span class="reporT__span">[100мм] Вентилируемая воздушная прослойка</span>
+								</div>
+								<div class="report__wrap">
+									<span class="reporT__span">Безразмерное сопротивление паропроницанию</span>
+									<span class="reporT__span">То же насыщенного паром воздуха</span>
+									<span class="reporT__span">Плотность максимального увлажнения</span>
+								</div>
+							</div>
+						</li>
+						<li class="report__item">
+							<div class="report__grid">
+								<h3 class="report__subtitle subtitle">
+									Потери тепла в час при сопротивлении теплопередаче (Вт•ч)
+								</h3>
+								<div class="report__wrap">
+									<span class="report__span">Сопротивление теплопередаче</span>
+									<span class="report__span">R</span>
+									<span class="report__span">±R, %</span>
+									<span class="report__span">Q</span>
+									<span class="report__span">±Q, Вт•ч</span>
+								</div>
+								<div class="report__wrap">
+									<span class="report__span">Санитарно-гигиенические требования [Rс]</span>
+									<span class="report__span">1,94</span>
+									<span class="report__span">+27.06</span>
+									<span class="report__span">17,40</span>
+									<span class="report__span">+4.71</span>
+								</div>
+								<div class="report__wrap">
+									<span class="report__span">Нормируемое значение поэлементных требований [Rэ]</span>
+									<span class="report__span">3,16</span>
+									<span class="report__span">+18.77</span>
+									<span class="report__span">10,69</span>
+									<span class="report__span">-2,01</span>
+								</div>
+								<div class="report__wrap">
+									<span class="report__span">Базовое значение поэлементных требований [Rт]</span>
+									<span class="report__span">3.95</span>
+									<span class="report__span">+48.47</span>
+									<span class="report__span">8.55</span>
+									<span class="report__span">-4.14</span>
+								</div>
+
+								<div class="report__wrap">
+									<span class="report__span">Общее сопротивление теплопередаче ограждающей конструкции
+										[Rо]</span>
+									<span class="report__span">2,66</span>
+									<span class="report__span">0,00</span>
+									<span class="report__span">12,69</span>
+									<span class="report__span">0,00</span>
+								</div>
+								<div class="report__wrap">
+									<span class="report__span">R + 10%</span>
+									<span class="report__span">2,93</span>
+									<span class="report__span">10,00</span>
+									<span class="report__span">11,54</span>
+									<span class="report__span">-1,15</span>
+								</div>
+								<div class="report__wrap">
+									<span class="report__span">R + 25%</span>
+									<span class="report__span"> 3,32 </span>
+									<span class="report__span">25,00</span>
+									<span class="report__span">10,15</span>
+									<span class="report__span">-2,54</span>
+								</div>
+								<div class="report__wrap">
+									<span class="report__span">R + 50%</span>
+									<span class="report__span"> 3,99</span>
+									<span class="report__span">50,00</span>
+									<span class="report__span">8,46</span>
+									<span class="report__span">-4,23</span>
+								</div>
+								<div class="report__wrap">
+									<span class="report__span">R + 100%</span>
+									<span class="report__span">5,32</span>
+									<span class="report__span">100,00</span>
+									<span class="report__span">6,35</span>
+									<span class="report__span">-6,35</span>
+								</div>
+
+								<h3 class="report__subtitle subtitle">Полученные показатели</h3>
+
+								<div class="report__wrap">
+									<span class="report__span">Потери тепла через 1 м² за отопительный сезон</span>
+									<span class="report__span">30.81 </span>
+									<span class="report__span">кВт•ч</span>
+								</div>
+								<div class="report__wrap">
+									<span class="report__span">Потери тепла через 1 м² за 1 час при температуре самой холодной
+										пятидневки</span>
+									<span class="report__span">12.69</span>
+									<span class="report__span">кВт•ч</span>
+								</div>
+
+								<h3 class="report__subtitle subtitle">
+									Тепловые потери через 1м² ограждающей конструкции
+								</h3>
+								<div class="report__wrap">
+									<span class="reporT__span">Помещение</span>
+									<span class="reporT__span">Улица</span>
+								</div>
+
+								<div class="reeport__wrap">
+									<span class="report__span">
+										<img src="" alt="" class="report__span-img" />
+									</span>
+								</div>
+								<div class="report__wrap">
+									<span class="reporT__span">R, (м²•˚C)/Вт</span>
+								</div>
+
+								<div class="report__wrap">
+									<span class="reporT__span">Зависимость потерь тепла от сопротивления теплопередачи (R)</span>
+								</div>
+								<h3 class="report__subtitle subtitle">
+									Потери тепла при сопротивлении R:
+								</h3>
+								<div class="report__wrap">
+									<span class="reporT__span">Санитарно гигиенические требования [Rc]</span>
+									<span class="reporT__span">Сопротивление теплопередаче ограждающей конструкции [R]</span>
+									<span class="reporT__span">R + 10%</span>
+									<span class="reporT__span">Санитарно гигиенические требования [Rc]</span>
+									<span class="reporT__span">Нормируемое значение поэлементных требований [Rэ]</span>
+									<span class="reporT__span">R + 25%</span>
+									<span class="reporT__span">Базовое значение поэлементных требований [Rт]</span>
+									<span class="reporT__span">R + 50%</span>
+								</div>
+								<div class="construction__btn-group">
+									<a class="construction__btn btn" href="#">назад</a>
+									<a class="construction__btn btn" href="#">Открыть / скачать PDF</a>
+								</div>
+							</div>
+						</li>
 					</ul>
 				</div>
 			</section>
@@ -337,7 +622,7 @@
 
 	</div>
 
-	<script src="js/app.min.js?_v=20220727140229"></script>
+	<script src="js/app.min.js?_v=20220729194058"></script>
 </body>
 
 </html>
