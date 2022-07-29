@@ -40,61 +40,75 @@
     @include flex(space-between, center, wrap);
 
     padding: 0 90px 0 50px;
-	&:last-child{
-		.construction__item{
-			height: 120px;
-		}
-	}
+    &:last-child {
+      .construction__label {
+        height: 120px;
+      }
+    }
   }
-  // .construction__item
-  &__item {
-	cursor: pointer;
-    @include flex($align-items:center, $flex-direction: column);
+
+  .construction__label {
+    cursor: pointer;
+    @include flex($align-items: center, $flex-direction: column);
     position: relative;
     gap: 10px;
     width: 172px;
 
     height: 99px;
     padding: 10px 0;
-	
-    &:hover {
-      border: 1px solid #b9b9b9;
-      .construction__label {
-        &::before {
-			cursor: pointer;
-          @include wh(17px);
-          border-radius: 50%;
-          @include pseudo;
-
-          border: 1px solid #b9b9b9;
-		  @include pos(absolute, $top: 5px, $right: 8px);
-        }
-      }
-    }
     &:focus {
       border: none;
       background-color: #ffffff;
       box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
       .construction__label {
-		cursor: pointer;
+        cursor: pointer;
         &::before {
           border: 1px solid #35414c;
-		  background-color: #35414c;
-		  
+          background-color: #35414c;
+
           @include wh(17px);
           border-radius: 50%;
           @include pseudo;
 
           @include pos(absolute, $top: 5px, $right: 8px);
         }
-		&::after{
-			@include pseudo;
-			@include background (url("@img/construction/check.png"));
-			@include wh(9px, 8px);
-			@include pos(absolute, $top: 9px, $right: 12px);
-		}
+        &::after {
+          @include pseudo;
+          @include background(url("@img/construction/check.png"));
+          @include wh(9px, 8px);
+          @include pos(absolute, $top: 9px, $right: 12px);
+        }
       }
     }
+    &:hover {
+      border: 1px solid #b9b9b9;
+      &::before {
+        cursor: pointer;
+        @include wh(17px);
+        border-radius: 50%;
+        @include pseudo;
+
+        border: 1px solid #b9b9b9;
+        @include pos(absolute, $top: 5px, $right: 8px);
+      }
+    }
+  }
+  .construction__radio:checked + .construction__label::before {
+    border: 1px solid #35414c;
+    background-color: #35414c;
+
+    @include wh(17px);
+    border-radius: 50%;
+    @include pseudo;
+
+    @include pos(absolute, $top: 5px, $right: 8px);
+  }
+
+  .construction__radio:checked + .construction__label::after {
+    @include pseudo;
+    @include background(url("@img/construction/check.png"));
+    @include wh(9px, 8px);
+    @include pos(absolute, $top: 9px, $right: 12px);
   }
 
   // .construction__img
@@ -104,27 +118,7 @@
   // .construction__radio
   &__radio {
     display: none;
-
   }
-  &__label ~ .construction__radio:checked{
-	&::before {
-		border: 1px solid #35414c;
-		background-color: #35414c;
-		
-		@include wh(17px);
-		border-radius: 50%;
-		@include pseudo;
-
-		@include pos(absolute, $top: 5px, $right: 8px);
-	  }
-	  &::after{
-		  @include pseudo;
-		  @include background (url("@img/construction/check.png"));
-		  @include wh(9px, 8px);
-		  @include pos(absolute, $top: 9px, $right: 12px);
-	  }
-  } 
-  
 
   // .construction__select
   &__select {
@@ -140,13 +134,12 @@
   }
   .select__title {
     border: none;
-	height: 15px;
-	
+    height: 15px;
   }
-  .select__value{
-	&::before{
-		right: 0;
-	}
+  .select__value {
+    &::before {
+      right: 0;
+    }
   }
 }
 .container {
