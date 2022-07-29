@@ -1,20 +1,62 @@
 .steps {
-  padding: 20px 0;
+  padding: 40px 0;
+  counter-reset: steps;
   // .steps__list
   &__list {
     @include flex(space-between, center, wrap);
-	margin: 0 auto;
-	max-width: 975px;
-	gap: 20px;
+    margin: 0 auto;
+    max-width: 1140px;
+    padding: 0 80px;
+    gap: 20px;
+    position: relative;
+    @include media(max, lg) {
+      gap: 10px;
+    }
+    &::after {
+      @include pseudo;
+      @include wh(100%, 2px);
+
+      background-color: #ebeaea;
+      @include pos(absolute, $bottom: 10px, $left: 0);
+
+      z-index: -2;
+    }
   }
   // .steps__item
   &__item {
-	@include flex(center, center, $flex-direction: column);
-	gap: 14px;
+    @include flex($align-items: center, $flex-direction: column);
+    gap: 26px;
+    position: relative;
+    height: 55px;
+    @include media(max, lg) {
+      height: 66px;
+    }
 
-	
+    &:first-child {
+      .steps__text {
+        opacity: 1;
+      }
+      .steps__number {
+        &::before {
+          background-color: #35414c;
+        }
+        &::after {
+          color: $primaryColor;
+
+          opacity: 1;
+        }
+      }
+      &::after {
+        background-color: #35414c;
+        @include pseudo;
+        @include wh(144%, 2px);
+        opacity: 1;
+        @include pos(absolute, $bottom: 10px, $left: -10px);
+        transform: translateX(-50%);
+        z-index: -1;
+      }
+    }
   }
-  
 
   // .steps__text
   &__text {
@@ -22,54 +64,95 @@
     font-size: 14px;
     line-height: 1.2;
     font-weight: 600;
+    text-align: center;
     color: $primaryTextColor;
     opacity: 0.6;
-    &--active {
-      opacity: 1;
+    @include media(max, lg) {
+      font-size: 12px;
+      max-width: 115px;
+      height: 30px;
     }
   }
   // .steps__number
   &__number {
     @include flex(center, center);
-    @include wh(30px);
-    border-radius: 50%;
-    background-color: #e0dede;
 
-    font-family: "Trebuchet MS Bold";
-    font-size: 18px;
-    line-height: 1.2;
-    font-weight: 700;
-    color: $primaryTextColor;
-    opacity: 0.7;
-	position: relative;
-    
-	&::before{
-		@include pseudo;
-		@include wh(480%, 2px);
-		
-		background-color:#ebeaea;
-		@include pos(absolute, $top:50%, $left:-380%);
-		transform: translateY(-50%);
-		z-index: -1;
-	}
-	&::after{
-		@include pseudo;
-		@include wh(480%, 2px);
-		
-		background-color:#ebeaea;
-		@include pos(absolute, $top:50%, $right:-500%);
-		transform: translateY(-50%);
-		z-index: -1;
+    position: relative;
+    @include media(max, lg) {
+      font-size: 16px;
+    }
+    &::before {
+      @include pseudo;
+      @include wh(30px);
+      border-radius: 50%;
+      background-color: #e0dede;
+      @include pos(absolute, $top: 50%, $left: 50%);
+      transform: translate(-50%, -50%);
+      z-index: -1;
+    }
+    &::after {
+      content: counter(steps);
+      counter-increment: steps;
 
-	}
-	&--active {
-		opacity: 1;
-		background-color: #35414c;
-		color: $primaryColor;
-		&::before{
-		  background-color: #7e858c;
-		  
-		}
-	  }
+      text-align: center;
+      @include flex(center, center);
+
+      @include pos(absolute, $top: 50%, $left: 50%);
+      transform: translate(-50%, -50%);
+      font-family: "Trebuchet MS Bold";
+      font-size: 18px;
+      line-height: 1.2;
+      font-weight: 700;
+      color: $primaryTextColor;
+      opacity: 0.7;
+    }
+  }
+}
+.step2 {
+  .steps {
+    // .steps__item
+    &__item {
+      &:nth-child(2) {
+        .steps__text {
+          opacity: 1;
+        }
+        .steps__number {
+          opacity: 1;
+
+          color: $primaryColor;
+          &::before {
+            background-color: #35414c;
+          }
+          &::after {
+            color: $primaryColor;
+            opacity: 1;
+          }
+        }
+        &::after {
+          background-color: #35414c;
+          @include pseudo;
+          @include wh(120%, 2px);
+          opacity: 1;
+          @include pos(absolute, $bottom: 10px, $left: -10px);
+          transform: translateX(-50%);
+          z-index: -1;
+          @include media(max, lg) {
+            left: -80px;
+            width: 220%;
+          }
+        }
+      }
+
+      &:first-child {
+        .steps__number {
+          &::after {
+            content: "";
+            @include wh(17px, 14px);
+            @include background(url("@img/steps/cheak_white.png"));
+          }
+        }
+     
+      }
+    }
   }
 }

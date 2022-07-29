@@ -99,11 +99,67 @@ margin: 10px 0 75px;
 	}
   }
 }
+.map {
+  // .map__form
+  &__form {}
+  // .map__title
+  &__title {}
+  // .map__wrapper
+  &__wrapper {}
+  // .map__box
+  &__box {}
+  // .map__subtitle
+  &__subtitle {}
+  // .map__select
+  &__select {}
+  // .map__box-img
+  &__box-img {}
+  // .map__img
+  &__img {}
+  // .map__spollers-box
+  &__spollers-box {}
+  // .map__spollers
+  &__spollers {}
+  // .map__btn-group
+  &__btn-group {
+    align-self:flex-end;
+  }
+  // .map__btn
+  &__btn {}
+}
 .container {
+}
+.title--location {
+}
+.title {
+}
+.title--left {
 }
 .subtitle {
 }
-.label {
+.spollers {
+  // .spollers__item
+  &__item {}
+  // .spollers__box-title
+  &__box-title {}
+  // .spollers__title
+  &__title {}
+  // .spollers__body
+  &__body {}
+  // .spollers__wrapper
+  &__wrapper {}
+  // .spollers__list
+  &__list {}
+  // .spollers__list-item
+  &__list-item {}
+  // .spollers__text
+  &__text {}
+}
+.title--climate {
+}
+.btn {
+}
+.btn--none {
 }
 
 

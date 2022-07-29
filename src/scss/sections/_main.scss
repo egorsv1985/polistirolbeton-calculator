@@ -1,5 +1,5 @@
 .main {
-	padding: 185px 0 20px;
+	padding: 185px 0 40px;
 	// .main__wrapper
 	&__wrapper {
 		@include flex($flex-direction: column);
@@ -13,7 +13,8 @@
 			@include pseudo;
 			@include background (url("@img/main/points.png"));
 			@include wh(39px, 8px);
-			@include pos(absolute, $bottom: 13px, $left: 13px);
+			@include pos(absolute, $top: 50%, $left: 13px);
+			transform: translateY(-50%);
 			
 		}
 
