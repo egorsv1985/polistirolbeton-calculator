@@ -7,7 +7,9 @@
             <div class="climate__spollers spollers" data-spollers>
               <div class="spollers__item">
                 <div class="spollers__box-title" data-spoller>
-                  <h2 class="climate__title spollers__title title">
+                  <h2
+                    class="climate__title spollers__title title title--left title--celsuis"
+                  >
                     климатические параметры:
                     <span class="climate__span"
                       >Внутри +20°С (55%) Снаружи -10°С (85%)</span
@@ -35,7 +37,7 @@
         </li>
 
         <li class="climate__item">
-          <h2 class="climate__title title">
+          <h2 class="climate__title title title--left title--wall">
             Выберите стеновой материал для расчета
           </h2>
           <div class="climate__box">
@@ -49,36 +51,64 @@
           </div>
         </li>
         <li class="climate__item">
-          <div class="climate__grid">
-            <h3 class="grid-wall__subtitle subtitle">
-              Слои конструкции (изнутри наружу)
-            </h3>
-            <div class="climate__wrap">
-              <span class="climate__span">№</span>
-              <span class="climate__span">Тип</span>
-              <span class="climate__span">Материал</span>
-              <span class="climate__span">Толщина, мм</span>
-              <span class="climate__span">λ</span>
-              <span class="climate__span">μ (Rп)</span>
-              <span class="climate__span">Управление</span>
-            </div>
-            <div class="climate__wrap">
-              <span class="climate__span">1.</span>
-              <span class="climate__span"></span>
-              <span class="climate__span">
-                <button class="grid-wall__button">Выберите слой</button>
-              </span>
-              <span class="climate__span"></span>
-              <span class="climate__span"></span>
-              <span class="climate__span"></span>
-              <span class="climate__span"></span>
+          <div class="climate__box-wrap">
+            <div class="climate__box-inner">
+              <h3
+                class="climate__subtitle subtitle subtitle--left subtitle--small subtitle--bold"
+              >
+                Внутри
+              </h3>
+              <table class="climate__table">
+                <thead>
+                  <tr>
+                    <th>№</th>
+                    <th>Тип</th>
+                    <th class="left">Материал</th>
+                    <th>Толщина, мм</th>
+                    <th>λ</th>
+                    <th>μ (Rп)</th>
+                    <th>Управление</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1.</td>
+
+                    <td></td>
+                    <td class="left">
+                      <button class="table__button">Выберите слой</button>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
 
-            <h3 class="grid-wall__subtitle subtitle">Материал</h3>
+            <h3
+              class="climate__subtitle subtitle subtitle--left subtitle--small subtitle--bold"
+            >
+              Материал
+            </h3>
+            <div class="climate__box-inner">
+              <h3
+                class="climate__subtitle subtitle subtitle--left subtitle--small subtitle--bold"
+              >
+                Снаружи
+              </h3>
+              <select name="material" id="material" class="climate__select">
+                <option value="0">Выберите наружный материал (с фасада)</option>
+                <option value="1">Выберите наружный материал2</option>
+                <option value="2">Выберите наружный материал3</option>
+              </select>
+            </div>
           </div>
         </li>
+
         <li class="climate__item">
-          <h2 class="climate__title title">
+          <h2 class="climate__title title title--left title--compared">
             Сравните соответствие полученного сопротивления теплопередачи с
             нормами для вашего региона
           </h2>
@@ -90,46 +120,64 @@
             <button class="climate__tab tab">Тепловые потери</button>
           </div>
           <div class="climate__tab-content">
-            <div class="climate__grid">
-              <h3 class="grid-wall__subtitle subtitle">
-                Слои конструкции (изнутри наружу)
-              </h3>
-              <div class="climate__wrap">
-                <span class="climate__span">№</span>
-                <span class="climate__span">Тип</span>
-                <span class="climate__span">Материал</span>
-                <span class="climate__span">Толщина</span>
-                <span class="climate__span">λ</span>
-                <span class="climate__span">R</span>
-                <span class="climate__span">Tmax</span>
-                <span class="climate__span">Tmin</span>
+            <div class="climate__box-wrap">
+              <div class="climate__box-inner">
+                <h3
+                  class="climate__subtitle subtitle subtitle--left subtitle--small subtitle--bold"
+                >
+                  Внутри
+                </h3>
+                <table class="climate__table">
+                  <thead>
+                    <tr>
+                      <th>№</th>
+                      <th>Тип</th>
+                      <th class="left">Материал</th>
+                      <th>Толщина</th>
+                      <th>λ</th>
+                      <th>R</th>
+                      <th>Tmax</th>
+
+                      <th>Tmin</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td class="left">Сопротивление тепловосприятию</td>
+                      <td></td>
+                      <td></td>
+                      <td>0,11</td>
+                      <td>+20,0</td>
+
+                      <td>+18,8</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                      <td class="left">Сопротивление теплоотдаче</td>
+                      <td></td>
+                      <td></td>
+                      <td>0,09</td>
+                      <td>-10,0</td>
+
+                      <td>-10,0</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
-              <div class="climate__wrap">
-                <span class="climate__span"></span>
-                <span class="climate__span"></span>
-                <span class="climate__span">Сопротивление тепловосприятию</span>
-                <span class="climate__span"></span>
-                <span class="climate__span"></span>
-                <span class="climate__span">0,11</span>
-                <span class="climate__span">+20,0</span>
-                <span class="climate__span">+18,8</span>
-              </div>
-              <div class="climate__wrap">
-                <span class="climate__span"></span>
-                <span class="climate__span"></span>
-                <span class="climate__span">Сопротивление теплоотдаче</span>
-                <span class="climate__span"></span>
-                <span class="climate__span"></span>
-                <span class="climate__span">0,09</span>
-                <span class="climate__span">-10,0</span>
-                <span class="climate__span">-10,0</span>
-              </div>
-              <h3 class="grid-wall__subtitle subtitle">
+
+              <h3
+                class="climate__subtitle subtitle subtitle--left subtitle--small subtitle--bold"
+              >
                 Сопротивление теплопередаче: 0.00 (м²•˚С)/Вт
               </h3>
             </div>
+
             <div class="climate__grid">
-              <h3 class="grid-wall__subtitle subtitle">
+              <h3                 class="climate__subtitle subtitle subtitle--left subtitle--small subtitle--bold"
+              >
                 Полученные показатели
               </h3>
               <div class="climate__wrap">
@@ -147,7 +195,8 @@
               </div>
             </div>
             <div class="climate__grid">
-              <h3 class="grid-wall__subtitle subtitle">
+              <h3                 class="climate__subtitle subtitle subtitle--left subtitle--small subtitle--bold"
+              >
                 Нормативные показатели
               </h3>
               <div class="climate__wrap">
@@ -172,7 +221,9 @@
           </div>
         </li>
         <li class="climate__item">
-          <h2 class="climate__title title">Выводы теплотехнического расчёта</h2>
+          <h2 class="climate__title title title--left title--verify">
+            Выводы теплотехнического расчёта
+          </h2>
           <ul class="climate__list-output">
             <li class="climate__item-output">
               <img src="" alt="" class="climate__img" />
