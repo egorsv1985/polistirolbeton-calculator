@@ -76,10 +76,18 @@
       transform: translateY(-50%);
     }
   }
+  &--report {
+    &::after {
+      @include pseudo;
+      @include background(url("@img/report/infographic.png"));
+      @include wh(22px, 29px);
+      @include pos(absolute, $top: 50%, $left: -45px);
+      transform: translateY(-50%);
+    }
+  }
 }
 
 .subtitle {
-  
   font-family: "OpenSans";
   font-size: 16px;
   line-height: 24px;
@@ -98,7 +106,7 @@
     align-self: flex-start;
     text-align: left;
   }
-  &--opacity{
+  &--opacity {
     opacity: 0.8;
   }
 }
