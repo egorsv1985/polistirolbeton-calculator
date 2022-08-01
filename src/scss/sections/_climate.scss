@@ -19,6 +19,9 @@
     gap: 20px;
     border-bottom: 1px solid #ebeaea;
     padding-bottom: 25px;
+    &:last-child{
+      border-bottom: none;
+    }
   }
   // .climate__spollers-box
   &__spollers-box {
@@ -120,25 +123,40 @@
   // .climate__tabs-group
   &__tabs-group {
 	@include flex();
-	gap: 15px;
+  width: 100%;
+	gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 5px;
   }
   // .climate__tab
   &__tab {
   }
   // .climate__tab-content
   &__tab-content {
+    @include flex($flex-wrap: wrap);
+    gap: 20px;
   }
   // .climate__list-output
   &__list-output {
+    @include flex($flex-direction: column);
+    gap: 20px;
   }
   // .climate__item-output
   &__item-output {
+    @include flex($align-items: center);
+    gap: 10px;
+
   }
   // .climate__img
   &__img {
   }
   // .climate__text
   &__text {
+  }
+  &__btn-group {
+    @include flex();
+    gap: 30px;
+    align-self: flex-end;
   }
 }
 .container {
@@ -180,8 +198,7 @@
 }
 .construction {
   // .construction__btn-group
-  &__btn-group {
-  }
+  
   // .construction__btn
   &__btn {
   }
@@ -191,8 +208,10 @@
 .climate {
   // .climate__box-wrap
   &__box-wrap {
-    @include flex(space-between, center, wrap);
+   @include flex($align-items: center, $flex-wrap: wrap);
+   gap: 20px;
     padding-left: 15px;
+    margin-bottom: 40px;
   }
   // .climate__subtitle
   &__subtitle {
@@ -206,6 +225,9 @@
 	.left{
 		text-align: left;
 	}
+  .red{
+    color: #f75445;
+  }
     th {
       height: 31px;
       font-family: "Segoe UI";
@@ -222,7 +244,7 @@
       font-family: "Segoe UI";
       font-size: 12px;
       line-height: 18px;
-      font-weight: 600;
+     
       color: #44424b;
 	  
     }
@@ -241,6 +263,8 @@
     @include flex($flex-direction: column);
     max-width: 640px;
     width: 100%;
+    border-bottom: 1px solid #ebeaea;
+    padding-bottom: 20px;
   }
   // .climate__select
   &__select {
