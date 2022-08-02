@@ -19,17 +19,12 @@
     gap: 20px;
     border-bottom: 1px solid #ebeaea;
     padding-bottom: 25px;
-    &:last-child{
+    &:last-child {
       border-bottom: none;
     }
   }
-  // .climate__spollers-box
-  &__spollers-box {
-  }
+
   .spollers {
-    // .spollers__item
-    &__item {
-    }
     // .spollers__box-title
     &__box-title {
       background-color: transparent;
@@ -40,25 +35,8 @@
         @include wh(16px, 10px);
       }
     }
-    // .spollers__body
-    &__body {
-    }
-    // .spollers__wrapper
-    &__wrapper {
-    }
-    // .spollers__list
-    &__list {
-    }
-    // .spollers__list-item
-    &__list-item {
-    }
-    // .spollers__text
-    &__text {
-    }
   }
-  // .climate__spollers
-  &__spollers {
-  }
+
   // .climate__title
   &__title {
     font-family: "Verdana";
@@ -87,12 +65,7 @@
     font-weight: 600;
     color: #424242;
   }
-  // .climate__range
-  &__range {
-  }
-  // .climate__span-group
-  &__span-group {
-  }
+
   // .climate__range-span
   &__range-span {
     position: absolute;
@@ -114,23 +87,16 @@
       left: 31%;
     }
   }
-  // .climate__grid
-  &__grid {
-  }
-  // .climate__wrap
-  &__wrap {
-  }
+
   // .climate__tabs-group
   &__tabs-group {
-	@include flex();
-  width: 100%;
-	gap: 10px;
-  margin-top: 10px;
-  margin-bottom: 5px;
+    @include flex();
+    width: 100%;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
   }
-  // .climate__tab
-  &__tab {
-  }
+
   // .climate__tab-content
   &__tab-content {
     @include flex($flex-wrap: wrap);
@@ -145,37 +111,80 @@
   &__item-output {
     @include flex($align-items: center);
     gap: 10px;
+  }
 
-  }
-  // .climate__img
-  &__img {
-  }
-  // .climate__text
-  &__text {
-  }
   &__btn-group {
     @include flex();
     gap: 30px;
     align-self: flex-end;
   }
-}
-.container {
+  // .climate__box-wrap
+  &__box-wrap {
+    @include flex($align-items: center, $flex-wrap: wrap);
+    gap: 20px;
+    padding-left: 15px;
+    margin-bottom: 40px;
+  }
+  // .climate__subtitle
+  &__subtitle {
+    font-family: "Segoe UI";
+
+    line-height: 18px;
+    margin-bottom: 10px;
+  }
+  // .climate__table
+  &__table {
+    .left {
+      text-align: left;
+    }
+    .red {
+      color: #f75445;
+    }
+    th {
+      height: 31px;
+      font-family: "Segoe UI";
+      font-size: 10px;
+      line-height: 18px;
+      font-weight: 600;
+      color: #44424b;
+      &:first-child {
+        width: 5%;
+      }
+    }
+    td {
+      height: 31px;
+      font-family: "Segoe UI";
+      font-size: 12px;
+      line-height: 18px;
+
+      color: #44424b;
+    }
+    tr {
+      text-align: center;
+    }
+    tbody tr {
+      &:nth-child(odd) {
+        background-color: #f9f9f9;
+      }
+    }
+  }
+  // .climate__box-inner
+  &__box-inner {
+    @include flex($flex-direction: column);
+    max-width: 640px;
+    width: 100%;
+    border-bottom: 1px solid #ebeaea;
+    padding-bottom: 20px;
+  }
+  // .climate__select
+  &__select {
+    max-width: 634px;
+  }
+  .select {
+    max-width: 634px;
+  }
 }
 
-.title {
-}
-.range {
-}
-.grid-wall {
-  // .grid-wall__subtitle
-  &__subtitle {
-  }
-  // .grid-wall__button
-  &__button {
-  }
-}
-.subtitle {
-}
 .tab {
   width: 205px;
   height: 40px;
@@ -196,88 +205,7 @@
 
   color: #ffffff;
 }
-.construction {
-  // .construction__btn-group
-  
-  // .construction__btn
-  &__btn {
-  }
-}
-.btn {
-}
-.climate {
-  // .climate__box-wrap
-  &__box-wrap {
-   @include flex($align-items: center, $flex-wrap: wrap);
-   gap: 20px;
-    padding-left: 15px;
-    margin-bottom: 40px;
-  }
-  // .climate__subtitle
-  &__subtitle {
-    font-family: "Segoe UI";
 
-    line-height: 18px;
-    margin-bottom: 10px;
-  }
-  // .climate__table
-  &__table {
-	.left{
-		text-align: left;
-	}
-  .red{
-    color: #f75445;
-  }
-    th {
-      height: 31px;
-      font-family: "Segoe UI";
-      font-size: 10px;
-      line-height: 18px;
-      font-weight: 600;
-      color: #44424b;
-      &:first-child {
-        width: 5%;
-      }
-    }
-    td {
-      height: 31px;
-      font-family: "Segoe UI";
-      font-size: 12px;
-      line-height: 18px;
-     
-      color: #44424b;
-	  
-    }
-	tr{
-		text-align: center;
-	}
-	tbody tr{
-
-		&:nth-child(odd) {
-			background-color: #f9f9f9;
-		}
-	}
-  }
-  // .climate__box-inner
-  &__box-inner {
-    @include flex($flex-direction: column);
-    max-width: 640px;
-    width: 100%;
-    border-bottom: 1px solid #ebeaea;
-    padding-bottom: 20px;
-  }
-  // .climate__select
-  &__select {
-    max-width: 634px;
-  }
-  .select {
-    max-width: 634px;
-  }
-}
-.subtitle {
-}
-.subtitle--left {
-}
 .table {
   // .table__button
   &__button {
@@ -291,10 +219,5 @@
     font-weight: 400;
     letter-spacing: 0.025em;
     color: #ffffff;
-  }
-}
-.grid-wall {
-  // .grid-wall__subtitle
-  &__subtitle {
   }
 }
