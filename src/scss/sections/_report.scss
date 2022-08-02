@@ -74,17 +74,16 @@
       line-height: 18px;
       font-weight: 600;
       color: #44424b;
-      &:first-child {
-        width: 5%;
-      }
+      
     }
     td {
-      height: 31px;
+     
       font-family: "Segoe UI";
       font-size: 12px;
       line-height: 18px;
 
       color: #44424b;
+	  padding: 6px 0 7px;
     }
     tr {
       text-align: center;
@@ -193,6 +192,12 @@
     &--light-blue {
       background-color: #0088ff;
     }
+	&--green{
+		background-color: #6ab932;;
+	}
+	&--orange{
+		background-color:#ff800d;
+	}
   }
   // .report__text-data
   &__text-data {
