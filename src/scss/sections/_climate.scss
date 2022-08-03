@@ -59,7 +59,7 @@
   }
   // .climate__label
   &__label {
-    font-family: "Segoe UI";
+    font-family: "Segoe UI Semibold";
     font-size: 12px;
     line-height: 18px;
     font-weight: 600;
@@ -127,7 +127,7 @@
   }
   // .climate__subtitle
   &__subtitle {
-    font-family: "Segoe UI";
+    font-family: "Segoe UI Semibold";
 
     line-height: 18px;
     margin-bottom: 10px;
@@ -142,7 +142,7 @@
     }
     th {
       height: 31px;
-      font-family: "Segoe UI";
+      font-family: "Segoe UI Semibold";
       font-size: 10px;
       line-height: 18px;
       font-weight: 600;
@@ -183,41 +183,40 @@
   .select {
     max-width: 634px;
   }
-}
-
-.tab {
-  width: 205px;
-  height: 40px;
-  background-color: #e0dede;
-  opacity: 0.7;
-  font-family: "Verdana";
-  font-size: 14px;
-  line-height: 1.2;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 0.025em;
-  color: #44424b;
-}
-.tab--active {
-  border: 1px solid #35414c;
-  background-color: #35414c;
-  font-family: "Verdana";
-
-  color: #ffffff;
-}
-
-.table {
-  // .table__button
-  &__button {
-    width: 129px;
-    height: 27px;
+  .tab {
+    width: 205px;
+    height: 40px;
+    background-color: #e0dede;
+    opacity: 0.7;
+    font-family: "Verdana";
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    color: #44424b;
+  }
+  .tab--active {
     border: 1px solid #35414c;
     background-color: #35414c;
     font-family: "Verdana";
-    font-size: 12px;
-    line-height: 1.2;
-    font-weight: 400;
-    letter-spacing: 0.025em;
+
     color: #ffffff;
+  }
+
+  .table {
+    // .table__button
+    &__button {
+      width: 129px;
+      height: 27px;
+      border: 1px solid #35414c;
+      background-color: #35414c;
+      font-family: "Verdana";
+      font-size: 12px;
+      line-height: 1.2;
+      font-weight: 400;
+      letter-spacing: 0.025em;
+      color: #ffffff;
+    }
   }
 }

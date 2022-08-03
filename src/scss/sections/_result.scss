@@ -35,7 +35,7 @@
   }
   // .result__subtitle
   &__subtitle {
-    font-family: "Segoe UI";
+    font-family: "Segoe UI Semibold";
     margin-bottom: 15px;
   }
   // .result__sublist
@@ -77,7 +77,7 @@
     }
     th {
       height: 31px;
-      font-family: "Segoe UI";
+      font-family: "Segoe UI Semibold";
       font-size: 10px;
       line-height: 18px;
       font-weight: 600;
@@ -111,9 +111,7 @@
     border: 1px solid #ffffff;
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
   }
-  // .result__img
-  &__img {
-  }
+
   // .result__list-result
   &__list-result {
     @include flex($flex-direction: column);

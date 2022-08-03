@@ -3,10 +3,6 @@
 
 // Блок со спойлерами
 .spollers {
-  // .spollers__item
-  &__item {
-  }
-
   // Заголовок спойлера
   // .spollers__title
   &__box-title {
@@ -23,9 +19,6 @@
 
         &::before {
           transition: transform 0.5s ease 0s;
-        }
-
-        &::before {
         }
       }
     }
@@ -45,13 +38,9 @@
         &::before {
           transition: transform 0.5s ease 0s;
         }
-
-        
       }
     }
   }
-
-  
 
   // Контент спойлера
   // .spollers__body
@@ -65,23 +54,9 @@
 
     padding: 10px 0 5px;
   }
-  // .spollers__subtitle
-  &__subtitle {
-  }
-
-  // .spollers__list
-  &__list {
-  }
-
-  // .spollers__text
-  &__text {
-  }
 }
 
 .spollers {
-  // .spollers__item
-  &__item {
-  }
   // .spollers__box-title
   &__box-title {
     width: 100%;
@@ -90,18 +65,18 @@
     background-color: $accentColor;
     @include flex($align-items: center);
     padding: 10px 0 10px 10px;
-    &--notbg{
+    &--notbg {
       background-color: transparent;
     }
   }
   // .spollers__title
   &__title {
     font-family: "Segoe UI Semibold";
-font-size: 12px;
-line-height: 1.2;
-font-weight: 600;
-color: $mainColor;
-letter-spacing: .4px;
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: $mainColor;
+    letter-spacing: 0.4px;
   }
   &__title,
   &__subtitle {
@@ -118,15 +93,7 @@ letter-spacing: .4px;
       transition: all 0.3s ease 0s;
     }
   }
-  // .spollers__body
-  &__body {
-  }
-  // .spollers__wrapper
-  &__wrapper {
-  }
-  // .spollers__subitem
-  &__subitem {
-  }
+
   // .spollers__box-subtitle
   &__box-subtitle {
     cursor: pointer;
@@ -135,20 +102,17 @@ letter-spacing: .4px;
     @include flex($align-items: center);
 
     padding: 2px 0 8px 40px;
-
   }
   // .spollers__subtitle
   &__subtitle {
-   
-font-size: 12px;
-line-height: 1.2;
-font-weight: 400;
-color: $mainColor;
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 400;
+    color: $mainColor;
 
+    letter-spacing: 0.4px;
 
-letter-spacing: .4px;
-
-max-width: 440px;
+    max-width: 440px;
     &::before {
       right: -40px;
     }
@@ -158,36 +122,17 @@ max-width: 440px;
     padding-left: 20px;
   }
 
-  // .spollers__subwrapper
-  &__subwrapper {
-  }
   // .spollers__list
   &__list {
     padding-left: 40px;
   }
-  // .spollers__list-item
-  &__list-item {
-  }
-  // .spollers__text
-  &__text {
-  }
-
-  // .spollers__box-check
-  &__box-check {
-  }
-  // .spollers__label
-  &__label {
-  
-  }
 }
 .spollers__body-item {
- 
   &:nth-child(even) {
     background-color: $bgColor;
   }
 }
 .spollers__list-item {
- 
   &:nth-child(even) {
     background-color: $bgColor;
   }

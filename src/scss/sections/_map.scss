@@ -1,5 +1,5 @@
 .map {
-	padding-bottom: 60px;
+  padding-bottom: 60px;
   // .map__form
   &__form {
     padding: 45px 30px 40px 65px;
@@ -16,19 +16,19 @@
 
     color: #63685f;
 
-	margin-bottom: 24px;
+    margin-bottom: 24px;
   }
 
   // .map__wrapper
   &__wrapper {
-	@include flex (space-between, center, wrap);
-	gap: 30px;
+    @include flex(space-between, center, wrap);
+    gap: 30px;
   }
   // .map__box
   &__box {
-	@include flex($flex-direction: column);
-	width: 31%;
-	gap: 5px;
+    @include flex($flex-direction: column);
+    width: 31%;
+    gap: 5px;
   }
   // .map__subtitle
   &__subtitle {
@@ -36,130 +36,37 @@
     font-size: 12px;
     line-height: 18px;
     font-weight: 600;
-	align-self:flex-start;
+    align-self: flex-start;
     opacity: 1;
     span {
       color: #f75445;
     }
   }
-  // .map__label
-  &__label {
-  }
-  // .map__select
-  &__select {
-  }
+
   // .map__box-img
   &__box-img {
-	max-width: 994px;
-max-height: 503px;
-margin: 10px 0 75px;
-
-
+    max-width: 994px;
+    max-height: 503px;
+    margin: 10px 0 75px;
   }
   // .map__img
   &__img {
-	width: 100%;
-	height: 100%;
+    width: 100%;
+    height: 100%;
   }
   // .map__spollers-box
   &__spollers-box {
-	max-width: 80%;
+    max-width: 80%;
   }
-  // .map__spollers
-  &__spollers {
-  }
-  // .map__title--climate
-  &__title--climate {
-  }
-  .spollers {
-	// .spollers__item
-	&__item {
-	}
-	// .spollers__box-title
-	&__box-title {
-		background-color: $primaryColor;
-	}
-	// .spollers__title
-	&__title {
-	}
-	// .spollers__body
-	&__body {
-	}
-	// .spollers__wrapper
-	&__wrapper {
-	}
-	// .spollers__list
-	&__list {
-	}
-	// .spollers__list-item
-	&__list-item {
-	}
-	// .spollers__text
-	&__text {
-	}
-  }
-}
-.map {
-  // .map__form
-  &__form {}
-  // .map__title
-  &__title {}
-  // .map__wrapper
-  &__wrapper {}
-  // .map__box
-  &__box {}
-  // .map__subtitle
-  &__subtitle {}
-  // .map__select
-  &__select {}
-  // .map__box-img
-  &__box-img {}
-  // .map__img
-  &__img {}
-  // .map__spollers-box
-  &__spollers-box {}
-  // .map__spollers
-  &__spollers {}
   // .map__btn-group
   &__btn-group {
-    align-self:flex-end;
+    align-self: flex-end;
   }
-  // .map__btn
-  &__btn {}
-}
-.container {
-}
-.title--location {
-}
-.title {
-}
-.title--left {
-}
-.subtitle {
-}
-.spollers {
-  // .spollers__item
-  &__item {}
-  // .spollers__box-title
-  &__box-title {}
-  // .spollers__title
-  &__title {}
-  // .spollers__body
-  &__body {}
-  // .spollers__wrapper
-  &__wrapper {}
-  // .spollers__list
-  &__list {}
-  // .spollers__list-item
-  &__list-item {}
-  // .spollers__text
-  &__text {}
-}
-.title--climate {
-}
-.btn {
-}
-.btn--none {
-}
 
-
+  .spollers {
+    // .spollers__box-title
+    &__box-title {
+      background-color: $primaryColor;
+    }
+  }
+}

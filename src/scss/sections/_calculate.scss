@@ -4,21 +4,17 @@
     @include flex($flex-direction: column);
     gap: 20px;
     padding: 20px 30px 30px 55px;
-
-   
   }
   // .calculate__item
   &__item {
     @include flex($flex-direction: column);
     gap: 20px;
-   
+
     padding-bottom: 25px;
-    
   }
   // .calculate__title
   &__title {
     font-family: "TrebuchetMS";
-    
   }
   // .calculate__box-wrap
   &__box-wrap {
@@ -40,8 +36,7 @@
   }
   // .calculate__subtitle
   &__subtitle {
-    font-family: "Segoe UI";
-   
+    font-family: "Segoe UI Semibold";
   }
   // .calculate__table
   &__table {
@@ -60,15 +55,15 @@
       color: #6ab932;
     }
     th {
-      font-family: "Segoe UI";
-     
+      font-family: "Segoe UI Semibold";
+
       font-weight: 600;
       color: #44424b;
       height: 66px;
     }
     td {
       font-family: "Segoe UI";
-     
+
       font-weight: 400;
       color: #44424b;
 
@@ -91,9 +86,7 @@
     border: 1px solid #ffffff;
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
   }
-  // .calculate__img
-  &__img {
-  }
+
   // .calculate__box-range
   &__box-range {
     @include flex($flex-direction: column);
@@ -103,18 +96,13 @@
   }
   // .calculate__label
   &__label {
-    font-family: "Segoe UI";
+    font-family: "Segoe UI Semibold";
     font-size: 12px;
     line-height: 18px;
     font-weight: 600;
     color: #424242;
   }
-  // .calculate__range
-  &__range {
-  }
-  // .calculate__span-group
-  &__span-group {
-  }
+
   // .calculate__range-span
   &__range-span {
     position: absolute;
@@ -144,18 +132,10 @@
   }
   // .calculate__wrap
   &__wrap {
-	@include flex(space-between, center);
+    @include flex(space-between, center);
     position: relative;
   }
-  // .calculate__box
-  &__box {
-  }
-  // .calculate__img-span
-  &__img-span {
-  }
-  // .calculate__span
-  &__span {
-  }
+  
   // .calculate__img-graph
   &__img-graph {
     position: relative;

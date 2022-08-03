@@ -97,6 +97,7 @@
   text-align: center;
   &--bold {
     font-weight: 600;
+    font-family: "Segoe UI Semibold";
   }
   &--small {
     font-size: 12px;
@@ -125,7 +126,4 @@
   &--red {
     color: #f75445;
   }
-}
-
-.span {
 }

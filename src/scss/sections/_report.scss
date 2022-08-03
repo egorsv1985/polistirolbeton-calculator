@@ -49,7 +49,7 @@
   }
   // .report__subtitle
   &__subtitle {
-    font-family: "Segoe UI";
+    font-family: "Segoe UI Semibold";
     margin-bottom: 15px;
   }
   // .report__table
@@ -60,7 +60,7 @@
     }
     .left {
       text-align: left;
-	  max-width: 450px;
+      max-width: 450px;
     }
     .red {
       color: #f75445;
@@ -70,21 +70,19 @@
     }
     th {
       height: 31px;
-      font-family: "Segoe UI";
+      font-family: "Segoe UI Semibold";
       font-size: 10px;
       line-height: 18px;
       font-weight: 600;
       color: #44424b;
-      
     }
     td {
-     
       font-family: "Segoe UI";
       font-size: 12px;
       line-height: 18px;
 
       color: #44424b;
-	  padding: 6px 0 7px;
+      padding: 6px 0 7px;
     }
     tr {
       text-align: center;
@@ -104,7 +102,7 @@
   }
   // .report__label
   &__label {
-    font-family: "Segoe UI";
+    font-family: "Segoe UI Semibold";
     font-size: 12px;
     line-height: 18px;
     font-weight: 600;
@@ -135,23 +133,13 @@
       left: 31%;
     }
   }
-  // .report__table-img
-  &__table-img {
-  }
+
   // .report__wrap
   &__wrap {
     @include flex(space-between, center);
     position: relative;
   }
-  // .report__box
-  &__box {
-  }
-  // .report__img-span
-  &__img-span {
-  }
-  // .report__span
-  &__span {
-  }
+
   // .report__img-graph
   &__img-graph {
     position: relative;
@@ -193,18 +181,18 @@
     &--light-blue {
       background-color: #0088ff;
     }
-	&--green{
-		background-color: #6ab932;;
-	}
-	&--orange{
-		background-color:#ff800d;
-	}
-	&--dark-green{
-		background-color: #184e00;
-	}
-	&--gray {
-		background-color: #888888;
-	}
+    &--green {
+      background-color: #6ab932;
+    }
+    &--orange {
+      background-color: #ff800d;
+    }
+    &--dark-green {
+      background-color: #184e00;
+    }
+    &--gray {
+      background-color: #888888;
+    }
   }
   // .report__text-data
   &__text-data {
@@ -215,19 +203,10 @@
     color: $primaryTextColor;
   }
 
-  // .report__grid
-  &__grid {
-  }
-  // .report__span-img
-  &__span-img {
-  }
   // .report__btn-group
   &__btn-group {
     @include flex();
     gap: 30px;
     align-self: flex-end;
-  }
-  // .report__btn
-  &__btn {
   }
 }

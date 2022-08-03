@@ -46,7 +46,7 @@
   font-family: "Segoe UI Semibold";
   font-display: swap;
   src: url("../fonts/Segoe UI Semibold.woff2") format("woff2"), url("../fonts/Segoe UI Semibold.woff") format("woff");
-  font-weight: 700;
+  font-weight: 600;
   font-style: normal;
 }
 @font-face {
@@ -267,14 +267,6 @@ h6 {
   color: #fff;
 }
 
-.button {
-  display: inline-flex;
-  padding: 0px 0px;
-}
-.button._fw {
-  width: 100%;
-}
-
 .btn {
   display: flex;
   justify-content: center;
@@ -364,6 +356,7 @@ textarea {
   left: -30px;
   transform: translateY(-50%);
 }
+
 .select {
   position: relative;
   max-width: 322px;
@@ -938,6 +931,7 @@ input[type=range]:focus::-ms-fill-upper {
   justify-content: space-between;
   padding: 10px 0 5px;
 }
+
 .spollers__box-title {
   width: 100%;
   cursor: pointer;
@@ -1001,6 +995,7 @@ input[type=range]:focus::-ms-fill-upper {
 .spollers__list {
   padding-left: 40px;
 }
+
 .spollers__body-item:nth-child(even) {
   background-color: #f9f9f9;
 }
@@ -1161,6 +1156,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 .subtitle--bold {
   font-weight: 600;
+  font-family: "Segoe UI Semibold";
 }
 .subtitle--small {
   font-size: 12px;
@@ -1238,6 +1234,7 @@ input[type=range]:focus::-ms-fill-upper {
 .main__box-img {
   margin-right: 60px;
 }
+
 .steps {
   padding: 40px 0;
   counter-reset: steps;
@@ -1472,7 +1469,7 @@ input[type=range]:focus::-ms-fill-upper {
   max-width: 700px;
 }
 .construction__subtitle {
-  font-family: "Segoe UI";
+  font-family: "Segoe UI Semibold";
   max-width: 130px;
 }
 .construction__list {
@@ -1639,12 +1636,13 @@ input[type=range]:focus::-ms-fill-upper {
 .map__spollers-box {
   max-width: 80%;
 }
-.map .spollers__box-title {
-  background-color: #fff;
-}
 .map__btn-group {
   align-self: flex-end;
 }
+.map .spollers__box-title {
+  background-color: #fff;
+}
+
 .climate__form {
   padding: 20px 30px 30px 55px;
   background-color: #ffffff;
@@ -1690,7 +1688,7 @@ input[type=range]:focus::-ms-fill-upper {
   padding-left: 10px;
 }
 .climate__label {
-  font-family: "Segoe UI";
+  font-family: "Segoe UI Semibold";
   font-size: 12px;
   line-height: 18px;
   font-weight: 600;
@@ -1745,7 +1743,7 @@ input[type=range]:focus::-ms-fill-upper {
   margin-bottom: 40px;
 }
 .climate__subtitle {
-  font-family: "Segoe UI";
+  font-family: "Segoe UI Semibold";
   line-height: 18px;
   margin-bottom: 10px;
 }
@@ -1757,7 +1755,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 .climate__table th {
   height: 31px;
-  font-family: "Segoe UI";
+  font-family: "Segoe UI Semibold";
   font-size: 10px;
   line-height: 18px;
   font-weight: 600;
@@ -1793,8 +1791,7 @@ input[type=range]:focus::-ms-fill-upper {
 .climate .select {
   max-width: 634px;
 }
-
-.tab {
+.climate .tab {
   width: 205px;
   height: 40px;
   background-color: #e0dede;
@@ -1807,15 +1804,13 @@ input[type=range]:focus::-ms-fill-upper {
   letter-spacing: 0.025em;
   color: #44424b;
 }
-
-.tab--active {
+.climate .tab--active {
   border: 1px solid #35414c;
   background-color: #35414c;
   font-family: "Verdana";
   color: #ffffff;
 }
-
-.table__button {
+.climate .table__button {
   width: 129px;
   height: 27px;
   border: 1px solid #35414c;
@@ -1858,7 +1853,7 @@ input[type=range]:focus::-ms-fill-upper {
   line-height: 18px;
 }
 .result__subtitle {
-  font-family: "Segoe UI";
+  font-family: "Segoe UI Semibold";
   margin-bottom: 15px;
 }
 .result__sublist {
@@ -1895,7 +1890,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 .result__table th {
   height: 31px;
-  font-family: "Segoe UI";
+  font-family: "Segoe UI Semibold";
   font-size: 10px;
   line-height: 18px;
   font-weight: 600;
@@ -1984,7 +1979,7 @@ input[type=range]:focus::-ms-fill-upper {
   width: 61%;
 }
 .report__subtitle {
-  font-family: "Segoe UI";
+  font-family: "Segoe UI Semibold";
   margin-bottom: 15px;
 }
 .report__table--border {
@@ -2003,7 +1998,7 @@ input[type=range]:focus::-ms-fill-upper {
 }
 .report__table th {
   height: 31px;
-  font-family: "Segoe UI";
+  font-family: "Segoe UI Semibold";
   font-size: 10px;
   line-height: 18px;
   font-weight: 600;
@@ -2030,7 +2025,7 @@ input[type=range]:focus::-ms-fill-upper {
   padding-left: 10px;
 }
 .report__label {
-  font-family: "Segoe UI";
+  font-family: "Segoe UI Semibold";
   font-size: 12px;
   line-height: 18px;
   font-weight: 600;
@@ -2121,6 +2116,7 @@ input[type=range]:focus::-ms-fill-upper {
   gap: 30px;
   align-self: flex-end;
 }
+
 .calculate__list {
   display: flex;
   flex-direction: column;
@@ -2153,7 +2149,7 @@ input[type=range]:focus::-ms-fill-upper {
   width: 61%;
 }
 .calculate__subtitle {
-  font-family: "Segoe UI";
+  font-family: "Segoe UI Semibold";
 }
 .calculate__table--border {
   padding-bottom: 10px;
@@ -2170,7 +2166,7 @@ input[type=range]:focus::-ms-fill-upper {
   color: #6ab932;
 }
 .calculate__table th {
-  font-family: "Segoe UI";
+  font-family: "Segoe UI Semibold";
   font-weight: 600;
   color: #44424b;
   height: 66px;
@@ -2204,7 +2200,7 @@ input[type=range]:focus::-ms-fill-upper {
   padding-left: 10px;
 }
 .calculate__label {
-  font-family: "Segoe UI";
+  font-family: "Segoe UI Semibold";
   font-size: 12px;
   line-height: 18px;
   font-weight: 600;
