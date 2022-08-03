@@ -60,6 +60,7 @@
     }
     .left {
       text-align: left;
+	  max-width: 450px;
     }
     .red {
       color: #f75445;
@@ -197,6 +198,12 @@
 	}
 	&--orange{
 		background-color:#ff800d;
+	}
+	&--dark-green{
+		background-color: #184e00;
+	}
+	&--gray {
+		background-color: #888;
 	}
   }
   // .report__text-data
