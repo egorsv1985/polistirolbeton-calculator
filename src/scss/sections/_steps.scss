@@ -51,8 +51,8 @@
         @include pseudo;
         @include wh(144%, 2px);
         opacity: 1;
-        @include pos(absolute, $bottom: 10px, $left: -10px);
-        transform: translateX(-50%);
+        @include pos(absolute, $bottom: 10px, $left: -80px);
+       
         z-index: -1;
       }
     }
@@ -112,6 +112,12 @@
   .steps {
     // .steps__item
     &__item {
+      &:first-child {
+       
+        &::after {
+          width: 400%;
+        }
+      }
       &:nth-child(2) {
         .steps__text {
           opacity: 1;
@@ -128,22 +134,100 @@
             opacity: 1;
           }
         }
-        &::after {
-          background-color: #35414c;
-          @include pseudo;
-          @include wh(120%, 2px);
-          opacity: 1;
-          @include pos(absolute, $bottom: 10px, $left: -10px);
-          transform: translateX(-50%);
-          z-index: -1;
-          @include media(max, lg) {
-            left: -80px;
-            width: 220%;
-          }
-        }
+        
       }
 
       &:first-child {
+        .steps__number {
+          &::after {
+            content: "";
+            @include wh(17px, 14px);
+            @include background(url("@img/steps/cheak_white.png"));
+          }
+        }
+     
+      }
+    }
+  }
+}
+.step3 {
+  .steps {
+    // .steps__item
+    &__item {
+      &:first-child {
+       
+        &::after {
+          width: 720%;
+        }
+      }
+      &:nth-child(2),
+      &:nth-child(3) {
+        .steps__text {
+          opacity: 1;
+        }
+        .steps__number {
+          opacity: 1;
+
+          color: $primaryColor;
+          &::before {
+            background-color: #35414c;
+          }
+          &::after {
+            color: $primaryColor;
+            opacity: 1;
+          }
+        }
+        
+      }
+
+      &:first-child,
+      &:nth-child(2) {
+        .steps__number {
+          &::after {
+            content: "";
+            @include wh(17px, 14px);
+            @include background(url("@img/steps/cheak_white.png"));
+          }
+        }
+     
+      }
+    }
+  }
+}
+.step4 {
+  .steps {
+    // .steps__item
+    &__item {
+      &:first-child {
+       
+        &::after {
+          width: 1000%;
+        }
+      }
+      &:nth-child(2),
+      &:nth-child(3),
+      &:last-child {
+        .steps__text {
+          opacity: 1;
+        }
+        .steps__number {
+          opacity: 1;
+
+          color: $primaryColor;
+          &::before {
+            background-color: #35414c;
+          }
+          &::after {
+            color: $primaryColor;
+            opacity: 1;
+          }
+        }
+        
+      }
+
+      &:first-child,
+      &:nth-child(2),
+      &:nth-child(3) {
         .steps__number {
           &::after {
             content: "";
