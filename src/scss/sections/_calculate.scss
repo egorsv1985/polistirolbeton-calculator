@@ -1,58 +1,49 @@
-.report {
-  // .report__title
-  &__title {
-    font-family: "Verdana";
-    font-size: 14px;
-
-    font-weight: 400;
-
-    color: #63685f;
-  }
-  // .report__list
+.calculate {
+  // .calculate__list
   &__list {
     @include flex($flex-direction: column);
     gap: 20px;
     padding: 20px 30px 30px 55px;
 
-    background-color: #ffffff;
-    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
-    border-radius: 2px;
+   
   }
-  // .report__item
+  // .calculate__item
   &__item {
     @include flex($flex-direction: column);
     gap: 20px;
-    border-bottom: 1px solid #ebeaea;
+   
     padding-bottom: 25px;
-    &:last-child {
-      border-bottom: none;
-    }
+    
   }
-  // .report__box-wrap
+  // .calculate__title
+  &__title {
+    font-family: "TrebuchetMS";
+    
+  }
+  // .calculate__box-wrap
   &__box-wrap {
     @include flex($flex-wrap: wrap);
     gap: 20px;
 
     margin-bottom: 40px;
   }
-  // .report__box-inner
+  // .calculate__box-inner
   &__box-inner {
     @include flex($flex-direction: column);
     gap: 10px;
     max-width: 640px;
 
-    border-bottom: 1px solid #ebeaea;
     padding-bottom: 20px;
     &:first-child {
       width: 61%;
     }
   }
-  // .report__subtitle
+  // .calculate__subtitle
   &__subtitle {
     font-family: "Segoe UI";
-    margin-bottom: 15px;
+   
   }
-  // .report__table
+  // .calculate__table
   &__table {
     &--border {
       padding-bottom: 10px;
@@ -60,7 +51,7 @@
     }
     .left {
       text-align: left;
-	  max-width: 450px;
+      max-width: 450px;
     }
     .red {
       color: #f75445;
@@ -69,40 +60,48 @@
       color: #6ab932;
     }
     th {
-      height: 31px;
       font-family: "Segoe UI";
-      font-size: 10px;
-      line-height: 18px;
+     
       font-weight: 600;
       color: #44424b;
-      
+      height: 66px;
     }
     td {
-     
       font-family: "Segoe UI";
-      font-size: 12px;
-      line-height: 18px;
-
+     
+      font-weight: 400;
       color: #44424b;
-	  padding: 6px 0 7px;
+
+      padding: 18px 0 17px;
     }
     tr {
       text-align: center;
     }
     tbody tr {
       &:nth-child(odd) {
-        background-color: #f9f9f9;
+        background-color: #e5e5e5;
       }
     }
   }
-  // .report__box-range
+  // .calculate__box-img
+  &__box-img {
+    @include flex(center, center);
+    width: 390px;
+    height: 215px;
+    border: 1px solid #ffffff;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.15);
+  }
+  // .calculate__img
+  &__img {
+  }
+  // .calculate__box-range
   &__box-range {
     @include flex($flex-direction: column);
     gap: 20px;
     position: relative;
     padding-left: 10px;
   }
-  // .report__label
+  // .calculate__label
   &__label {
     font-family: "Segoe UI";
     font-size: 12px;
@@ -110,11 +109,13 @@
     font-weight: 600;
     color: #424242;
   }
-  // .report__span-group
+  // .calculate__range
+  &__range {
+  }
+  // .calculate__span-group
   &__span-group {
   }
-  // .report__range-span
-  // .climate__range-span
+  // .calculate__range-span
   &__range-span {
     position: absolute;
     bottom: 0;
@@ -135,34 +136,36 @@
       left: 31%;
     }
   }
-  // .report__table-img
+  // .calculate__table--border
+  &__table--border {
+  }
+  // .calculate__table-img
   &__table-img {
   }
-  // .report__wrap
+  // .calculate__wrap
   &__wrap {
-    @include flex(space-between, center);
+	@include flex(space-between, center);
     position: relative;
   }
-  // .report__box
+  // .calculate__box
   &__box {
   }
-  // .report__img-span
+  // .calculate__img-span
   &__img-span {
   }
-  // .report__span
+  // .calculate__span
   &__span {
   }
-  // .report__img-graph
+  // .calculate__img-graph
   &__img-graph {
     position: relative;
     padding-bottom: 10px;
   }
-  // .report__span-absolute
+  // .calculate__span-absolute
   &__span-absolute {
     @include pos(absolute, $bottom: -5px, $left: 10px);
   }
-
-  // .report__wrap-content
+  // .calculate__wrap-content
   &__wrap-content {
     @include flex($align-items: center);
     gap: 10px;
@@ -172,7 +175,7 @@
       margin-bottom: 15px;
     }
   }
-  // .report__span-data
+  // .calculate__span-data
   &__span-data {
     @include flex(center, center);
     @include wh(11px);
@@ -193,41 +196,13 @@
     &--light-blue {
       background-color: #0088ff;
     }
-	&--green{
-		background-color: #6ab932;;
-	}
-	&--orange{
-		background-color:#ff800d;
-	}
-	&--dark-green{
-		background-color: #184e00;
-	}
-	&--gray {
-		background-color: #888888;
-	}
   }
-  // .report__text-data
+  // .calculate__text-data
   &__text-data {
     font-family: "Segoe UI";
     font-size: 10px;
     line-height: 18px;
     font-weight: 400;
     color: $primaryTextColor;
-  }
-
-  // .report__grid
-  &__grid {
-  }
-  // .report__span-img
-  &__span-img {
-  }
-  // .report__btn-group
-  &__btn-group {
-    @include flex();
-    gap: 30px;
-    align-self: flex-end;
-  }
-  // .report__btn
-  &__btn {
   }
 }
