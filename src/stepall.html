@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/_head.htm',{ "title":"Теплотехнический калькулятор шаг 4" })
+
+  <body>
+    <div class="wrapper">
+      
+      <main class="step4">
+        @@include('html/section/_main.html',{})
+        @@include('html/section/_steps.html',{})
+
+        <form action="#">
+
+            
+            <div class="step-wrapper">
+                @@include('html/section/_map.html',{})
+            </div>
+            <div class="step-wrapper">
+                @@include('html/section/_construction.html',{})
+            </div>
+            <div class="step-wrapper">
+                @@include('html/section/_climate.html',{})
+            </div>
+            <div class="step-wrapper">
+                @@include('html/section/_result.html',{})
+                @@include('html/section/_report.html',{})
+            </div>
+
+        </form>
+
+
+        
+       
+      </main>
+
+  
+    </div>
+  
+    @@include('html/_js.htm',{})
+  </body>
+</html>
