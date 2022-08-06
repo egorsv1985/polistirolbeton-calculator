@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Теплотехнический калькулятор шаг 4</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20220806122845">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+
+		<main class="step4">
+			<section class="main">
+				<div class="container">
+					<div class="main__wrapper">
+						<h1 class="main__title title">
+							Теплотехнический калькулятор ограждающих конструкций
+						</h1>
+						<h2 class="main__subtitle subtitle">
+							Расчёт толщины стены в зависимости от выбранного материала и региона строительства
+						</h2>
+						<div class="main__wrap">
+							<div class="main__content">
+								<p class="main__text text">
+									Во времена, когда строители еще не задумывались о теплопроводности,
+									толщина стен дома могла достигать 1,5 метров. Так даже в сильный
+									мороз внутри помещения сохранялось тепло, а в жару – приятная
+									прохлада. В наши дни строить толстые стены экономически
+									нецелесообразно: наружные стены имеют многослойную структуру из
+									современных материалов, которые обладают значительно большими
+									показателями тепловой защиты и прочностными характеристиками при
+									меньшей толщине.
+								</p>
+								<p class="main__text text">
+									<span class="text--red">Теплотехнический калькулятор</span> поможет
+									выбрать материал, количество функциональных слоев (конструкционного,
+									теплоизоляционного, облицовочного фасадного и др.) и рассчитать
+									толщину несущих стен дома, оптимальную для вашего региона
+									строительства.
+								</p>
+							</div>
+							<div class="main__box-img">
+								<picture><source srcset="img/main/1.webp" type="image/webp"><img src="img/main/1.png" alt="home" class="main__img" /></picture>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="steps">
+				<div class="container">
+					<ul class="steps__list">
+						<li class="steps__item">
+							<p class="steps__text">Регион и город</p>
+							<span class="steps__number"></span>
+						</li>
+						<li class="steps__item">
+							<p class="steps__text">Тип помещения для расчета</p>
+							<span class="steps__number"></span>
+						</li>
+						<li class="steps__item">
+							<p class="steps__text">Стеновой материал для расчета</p>
+							<span class="steps__number"></span>
+						</li>
+						<li class="steps__item">
+							<p class="steps__text">Отчет по расчету</p>
+							<span class="steps__number"></span>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+
+			<form action="#">
+
+
+				<div class="step-wrapper">
+					<section class="map">
+						<div class="container">
+							<form action="#" class="map__form">
+								<h2 class="map__title title--location title title--left">
+									Укажите свой регион
+								</h2>
+								<div class="map__wrapper">
+									<div class="map__box">
+										<h3 class="map__subtitle subtitle">Страна <span>*</span></h3>
+
+										<select name="country" id="country" class="map__select">
+											<option value="0">Выберите страну</option>
+											<option value="1">Россия</option>
+											<option value="2">Азербайджан</option>
+											<option value="3">Армения</option>
+											<option value="4">Беларусь</option>
+											<option value="5">Грузия</option>
+											<option value="6">Казахстан</option>
+											<option value="7">Кыргызстан</option>
+											<option value="8">Молдова</option>
+											<option value="9">Туркменистан</option>
+											<option value="10">Узбекистан</option>
+											<option value="11">Украина</option>
+											<option value="12">Таджикистан</option>
+										</select>
+									</div>
+									<div class="map__box">
+										<h3 class="map__subtitle subtitle">Регион <span>*</span></h3>
+
+										<select name="region" id="region" class="map__select">
+											<option value="0">Выберите регион</option>
+											<option value="2">Республика Адыгея</option>
+											<option value="4">Республика Алтай</option>
+											<option value="3">Алтайский край</option>
+											<option value="5">Амурская область</option>
+											<option value="6">Архангельская область</option>
+											<option value="7">Астраханская область</option>
+											<option value="8">Республика Башкортостан</option>
+											<option value="9">Белгородская область</option>
+											<option value="10">Брянская область</option>
+											<option value="11">Республика Бурятия</option>
+											<option value="12">Владимирская область</option>
+											<option value="13">Волгоградская область</option>
+											<option value="14">Вологодская область</option>
+											<option value="15">Воронежская область</option>
+											<option value="16">Республика Дагестан</option>
+											<option value="171">Еврейская автономная область</option>
+											<option value="73">Забайкальский край</option>
+											<option value="17">Ивановская область</option>
+											<option value="168">Республика Ингушетия</option>
+											<option value="18">Иркутская область</option>
+											<option value="19">Кабардино-Балкарская Республика</option>
+											<option value="20">Калининградская область</option>
+											<option value="21">Республика Калмыкия</option>
+											<option value="22">Калужская область</option>
+											<option value="23">Камчатский край</option>
+											<option value="24">Карачаево-Черкесская Республика</option>
+											<option value="25">Республика Карелия</option>
+											<option value="26">Кемеровская область</option>
+											<option value="27">Кировская область</option>
+											<option value="28">Республика Коми</option>
+											<option value="29">Костромская область</option>
+											<option value="30">Краснодарский край</option>
+											<option value="31">Красноярский край</option>
+											<option value="163">Республика Крым</option>
+											<option value="32">Курганская область</option>
+											<option value="33">Курская область</option>
+											<option value="35">Ленинградская область</option>
+											<option value="34">Липецкая область</option>
+											<option value="36">Магаданская область</option>
+											<option value="37">Республика Марий Эл</option>
+											<option value="38">Республика Мордовия</option>
+											<option value="39">Московская область</option>
+											<option value="40">Мурманская область</option>
+											<option value="77">Ненецкий АО (Архангельская область)</option>
+											<option value="41">Нижегородская область</option>
+											<option value="42">Новгородская область</option>
+											<option value="43">Новосибирская область</option>
+											<option value="44">Омская область</option>
+											<option value="45">Оренбургская область</option>
+											<option value="46">Орловская область</option>
+											<option value="47">Пензенская область</option>
+											<option value="48">Пермский край</option>
+											<option value="49">Приморский край</option>
+											<option value="50">Псковская область</option>
+											<option value="51">Ростовская область</option>
+											<option value="52">Рязанская область</option>
+											<option value="53">Самарская область</option>
+											<option value="55">Саратовская область</option>
+											<option value="56">Сахалинская область</option>
+											<option value="54">Свердловская область</option>
+											<option value="57">Республика Северная Осетия - Алания</option>
+											<option value="58">Смоленская область</option>
+											<option value="59">Ставропольский край</option>
+											<option value="60">Тамбовская область</option>
+											<option value="61">Республика Татарстан</option>
+											<option value="62">Тверская область</option>
+											<option value="63">Томская область</option>
+											<option value="65">Тульская область</option>
+											<option value="64">Республика Тыва</option>
+											<option value="66">Тюменская область</option>
+											<option value="67">Удмуртская Республика</option>
+											<option value="68">Ульяновская область</option>
+											<option value="69">Хабаровский край</option>
+											<option value="70">Республика Хакасия</option>
+											<option value="170">Ханты-Мансийский автономный округ - Югра</option>
+											<option value="71">Челябинская область</option>
+											<option value="72">Чеченская Республика</option>
+											<option value="74">Чувашская Республика - Чувашия</option>
+											<option value="75">Чукотский АО (Магаданская область)</option>
+											<option value="76">Республика Саха (Якутия)</option>
+											<option value="169">Ямало-Ненецкий автономный округ</option>
+											<option value="78">Ярославская область</option>
+										</select>
+									</div>
+									<div class="map__box">
+										<h3 class="map__subtitle subtitle">Населенный пункт <span>*</span></h3>
+
+										<select name="city" id="city" class="map__select">
+											<option value="0">Выберите населенный пункт</option>
+											<option value="210">Дмитров</option>
+											<option value="211">Кашира</option>
+											<option value="677">Можайск</option>
+											<option value="212">Москва</option>
+											<option value="678">Наро-Фоминск</option>
+											<option value="661">Новомосковский АО</option>
+											<option value="662">Троицкий АО</option>
+											<option value="679">Черусти</option>
+										</select>
+									</div>
+								</div>
+
+								<h3 class="map__subtitle subtitle">
+									<span>*</span>обязательное поле ввода
+								</h3>
+								<div class="map__box-img">
+									<img src="img/map/карта страны.png" alt="map" class="map__img" />
+								</div>
+								<div class="map__spollers-box">
+									<div class="map__spollers spollers" data-spollers>
+										<div class="spollers__item">
+											<div class="spollers__box-title" data-spoller>
+												<h2 class="map__title title--climate spollers__title title">
+													климатические параметры
+												</h2>
+											</div>
+											<div class="spollers__body">
+												<div class="spollers__wrapper">
+													<ul class="spollers__list">
+														<li class="spollers__list-item">
+															<p class="spollers__text">Целюлюза (эковата)</p>
+														</li>
+														<li class="spollers__list-item">
+															<p class="spollers__text">Целюлюза (эковата)</p>
+														</li>
+														<li class="spollers__list-item">
+															<p class="spollers__text">Целюлюза (эковата)</p>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="map__btn-group">
+									<a class="map__btn btn btn" href="#">назад</a>
+									<a class="map__btn btn" href="#">Подтвердить</a>
+
+								</div>
+							</form>
+						</div>
+					</section>
+
+				</div>
+				<div class="step-wrapper">
+					<section class="construction">
+						<div class="container">
+							<form action="" class="construction__form">
+								<h2 class="construction__title title title--type title--left">
+									Укажите вид помещения и тип конструкции
+								</h2>
+								<div class="construction__wrapper">
+									<div class="construction__box-content">
+										<h3 class="construction__subtitle subtitle subtitle--bold subtitle--small subtitle--left">
+											Выберите вид помещения
+										</h3>
+										<ul class="construction__list">
+											<li class="construction__item">
+												<input type="checkbox" name="house" id="house" class="construction__radio" />
+												<label for="house" class="construction__label">
+													<picture><source srcset="img/construction/house.webp" type="image/webp"><img class="construction__img" src="img/construction/house.png" alt="house" /></picture>
+
+													<h3 class="construction__subtitle subtitle subtitle--small">
+														Жилое помещение
+													</h3>
+												</label>
+											</li>
+
+											<li class="construction__item">
+												<input type="checkbox" name="kitchen" id="kitchen" class="construction__radio" />
+												<label for="kitchen" class="construction__label">
+													<picture><source srcset="img/construction/kitchen.webp" type="image/webp"><img class="construction__img" src="img/construction/kitchen.png" alt="house" /></picture>
+
+													<h3 class="construction__subtitle subtitle subtitle--small">
+														Кухня
+													</h3>
+												</label>
+											</li>
+
+											<li class="construction__item">
+												<input type="checkbox" name="bathroom" id="bathroom" class="construction__radio" />
+												<label for="bathroom" class="construction__label">
+													<picture><source srcset="img/construction/bathroom.webp" type="image/webp"><img class="construction__img" src="img/construction/bathroom.png" alt="house" /></picture>
+
+													<h3 class="construction__subtitle subtitle subtitle--small">
+														Ванная
+													</h3>
+												</label>
+											</li>
+											<li class="construction__item">
+												<input type="checkbox" name="garage" id="garage" class="construction__radio" />
+												<label for="garage" class="construction__label">
+													<picture><source srcset="img/construction/garage.webp" type="image/webp"><img class="construction__img" src="img/construction/garage.png" alt="house" /></picture>
+
+													<h3 class="construction__subtitle subtitle subtitle--small">
+														Ненормированное
+													</h3>
+												</label>
+											</li>
+											<li class="construction__item">
+												<input type="checkbox" name="laundry_room" id="laundry_room" class="construction__radio" />
+												<label for="laundry_room" class="construction__label">
+													<picture><source srcset="img/construction/laundry_room.webp" type="image/webp"><img class="construction__img" src="img/construction/laundry_room.png" alt="laundry_room" /></picture>
+
+													<h3 class="construction__subtitle subtitle subtitle--small">
+														Техническое помещение
+													</h3>
+												</label>
+											</li>
+										</ul>
+									</div>
+									<div class="construction__box-content">
+										<h3 class="construction__subtitle subtitle subtitle--small subtitle--bold subtitle--left">
+											Выберите тип конструкции
+										</h3>
+										<ul class="construction__list">
+											<li class="construction__item">
+												<input type="checkbox" name="house_3" id="house_3" class="construction__radio" />
+												<label for="house_3" class="construction__label">
+													<picture><source srcset="img/construction/house_3.webp" type="image/webp"><img class="construction__img" src="img/construction/house_3.png" alt="house_3" /></picture>
+
+													<h3 class="construction__subtitle subtitle subtitle--small">
+														Стена
+													</h3>
+												</label>
+											</li>
+											<li class="construction__item">
+												<input type="checkbox" name="house_2" id="house_2" class="construction__radio" />
+												<label for="house_2" class="construction__label">
+													<picture><source srcset="img/construction/house_2.webp" type="image/webp"><img class="construction__img" src="img/construction/house_2.png" alt="house_2" /></picture>
+
+													<select name="flooring" id="flooring" class="construction__select">
+														<option value="0">Перектытие</option>
+														<option value="1">Перектытие1</option>
+														<option value="2">Перектытие2</option>
+													</select>
+												</label>
+											</li>
+											<li class="construction__item">
+												<input type="checkbox" name="house_1" id="house_1" class="construction__radio" />
+												<label for="house_1" class="construction__label">
+													<picture><source srcset="img/construction/house_1.webp" type="image/webp"><img class="construction__img" src="img/construction/house_1.png" alt="house_1" /></picture>
+
+													<h3 class="construction__subtitle subtitle subtitle--small">
+														Чердачное перекрытие или утепленная кровля
+													</h3>
+												</label>
+											</li>
+										</ul>
+									</div>
+									<div class="construction__btn-group">
+										<a class="construction__btn btn" href="#">назад</a>
+										<a class="construction__btn btn" href="#">Подтвердить</a>
+									</div>
+								</div>
+							</form>
+						</div>
+					</section>
+
+				</div>
+				<div class="step-wrapper">
+					<section class="climate">
+						<div class="container">
+							<form action="#" class="climate__form">
+								<ul class="climate__list">
+									<li class="climate__item">
+										<div class="climate__spollers-box">
+											<div class="climate__spollers spollers" data-spollers>
+												<div class="spollers__item">
+													<div class="spollers__box-title" data-spoller>
+														<h2 class="climate__title spollers__title title title--left title--celsuis">
+															климатические параметры:
+															<span class="climate__span">Внутри +20°С (55%) Снаружи -10°С (85%)</span>
+														</h2>
+													</div>
+													<div class="spollers__body">
+														<div class="spollers__wrapper">
+															<ul class="spollers__list">
+																<li class="spollers__list-item">
+																	<p class="spollers__text">Целюлюза (эковата)</p>
+																</li>
+																<li class="spollers__list-item">
+																	<p class="spollers__text">Целюлюза (эковата)</p>
+																</li>
+																<li class="spollers__list-item">
+																	<p class="spollers__text">Целюлюза (эковата)</p>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+
+									<li class="climate__item">
+										<h2 class="climate__title title title--left title--wall">
+											Выберите стеновой материал для расчета
+										</h2>
+										<div class="climate__box">
+											<label for="range" class="climate__label">Тепловая защита</label>
+											<input type="range" class="climate__range range" />
+											<div class="climate__span-group">
+												<span class="climate__range-span">Rc</span>
+												<span class="climate__range-span">Rэ</span>
+												<span class="climate__range-span">Rт</span>
+											</div>
+										</div>
+									</li>
+									<li class="climate__item">
+										<div class="climate__box-wrap">
+											<div class="climate__box-inner">
+												<h3 class="climate__subtitle subtitle subtitle--left subtitle--small subtitle--bold">
+													Внутри
+												</h3>
+												<table class="climate__table">
+													<thead>
+														<tr>
+															<th>№</th>
+															<th>Тип</th>
+															<th class="left">Материал</th>
+															<th>Толщина, мм</th>
+															<th>λ</th>
+															<th>μ (Rп)</th>
+															<th>Управление</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>1.</td>
+
+															<td></td>
+															<td class="left">
+																<button class="table__button">Выберите слой</button>
+															</td>
+															<td></td>
+															<td></td>
+															<td></td>
+															<td></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+
+											<h3 class="climate__subtitle subtitle subtitle--left subtitle--small subtitle--bold">
+												Материал
+											</h3>
+											<div class="climate__box-inner">
+												<h3 class="climate__subtitle subtitle subtitle--left subtitle--small subtitle--bold">
+													Снаружи
+												</h3>
+												<select name="material" id="material" class="climate__select">
+													<option value="0">Выберите наружный материал (с фасада)</option>
+													<option value="1">Выберите наружный материал2</option>
+													<option value="2">Выберите наружный материал3</option>
+												</select>
+											</div>
+										</div>
+										<div class="climate__box-wrap">
+											<h2 class="climate__title title title--left title--compared">
+												Сравните соответствие полученного сопротивления теплопередачи с
+												нормами для вашего региона
+											</h2>
+											<div class="climate__tabs-group">
+												<button class="climate__tab tab tab--active">
+													Тепловая защита
+												</button>
+												<button class="climate__tab tab">Влагонакопление</button>
+												<button class="climate__tab tab">Тепловые потери</button>
+											</div>
+											<div class="climate__tab-content">
+												<div class="climate__box-inner">
+													<h3 class="climate__subtitle subtitle subtitle--left subtitle--small subtitle--bold">
+														Слои конструкции (изнутри наружу)
+													</h3>
+													<table class="climate__table">
+														<thead>
+															<tr>
+																<th>№</th>
+																<th>Тип</th>
+																<th class="left">Материал</th>
+																<th>Толщина</th>
+																<th>λ</th>
+																<th>R</th>
+																<th>Tmax</th>
+
+																<th>Tmin</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<td></td>
+																<td></td>
+																<td class="left">Сопротивление тепловосприятию</td>
+																<td></td>
+																<td></td>
+																<td>0,11</td>
+																<td>+20,0</td>
+
+																<td>+18,8</td>
+															</tr>
+															<tr>
+																<td></td>
+																<td></td>
+																<td class="left">Сопротивление теплоотдаче</td>
+																<td></td>
+																<td></td>
+																<td>0,09</td>
+																<td>-10,0</td>
+
+																<td>-10,0</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+
+												<h3 class="climate__subtitle subtitle subtitle--left subtitle--small subtitle--bold">
+													Сопротивление теплопередаче: 0.00 (м²•˚С)/Вт
+												</h3>
+
+												<div class="climate__box-inner">
+													<h3 class="climate__subtitle subtitle subtitle--left subtitle--small subtitle--bold">
+														Полученные показатели
+													</h3>
+													<table class="climate__table">
+														<tbody>
+															<tr>
+																<td class="left">
+																	Термическое сопротивление ограждающей конструкции [Rк]
+																</td>
+
+																<td></td>
+																<td class="red">0,00</td>
+																<td></td>
+
+																<td></td>
+															</tr>
+															<tr>
+
+																<td class="left">
+																	Общее сопротивление теплопередаче ограждающей
+																	конструкции [Rо]
+																</td>
+
+																<td></td>
+																<td class="red">0,00</td>
+																<td></td>
+
+																<td></td>
+															</tr>
+														</tbody>
+													</table>
+
+
+												</div>
+												<div class="climate__box-inner">
+													<h3 class="climate__subtitle subtitle subtitle--left subtitle--small subtitle--bold">
+														Нормативные показатели
+													</h3>
+													<table class="climate__table">
+														<tbody>
+															<tr>
+																<td class="left">
+																	Санитарно-гигиенические требования [Rс]
+																</td>
+
+																<td></td>
+																<td class="red">1,26</td>
+																<td></td>
+
+																<td></td>
+															</tr>
+															<tr>
+
+																<td class="left">
+																	Нормируемое значение поэлементных требований [Rэ]
+																</td>
+
+																<td></td>
+																<td class="red">1,82</td>
+																<td></td>
+
+																<td></td>
+															</tr>
+															<tr>
+
+																<td class="left">
+																	Базовое значение поэлементных требований [Rт]
+																</td>
+
+																<td></td>
+																<td class="red">2,90</td>
+																<td></td>
+
+																<td></td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+									</li>
+
+									<li class="climate__item">
+										<h2 class="climate__title title title--left title--verify">
+											Выводы теплотехнического расчёта
+										</h2>
+										<ul class="climate__list-output">
+											<li class="climate__item-output">
+												<picture><source srcset="img/climate/thermometer_red.webp" type="image/webp"><img src="img/climate/thermometer_red.png" alt="thermometer" class="climate__img" /></picture>
+												<p class="climate__text">
+													Ограждающая конструкция не удовлетворяет санитарно-гигиеническим
+													нормам по тепловой защите.
+												</p>
+											</li>
+											<li class="climate__item-output">
+												<picture><source srcset="img/climate/thermometer_red.webp" type="image/webp"><img src="img/climate/thermometer_red.png" alt="thermometer" class="climate__img" /></picture>
+												<p class="climate__text">
+													Ограждающая конструкция не удовлетворяет нормам (поэлементные
+													требования) по тепловой защите.
+												</p>
+											</li>
+											<li class="climate__item-output">
+												<picture><source srcset="img/climate/damp_red.webp" type="image/webp"><img src="img/climate/damp_red.png" alt="damp" class="climate__img" /></picture>
+												<p class="climate__text">
+													Ограждающая конструкция не удовлетворяет нормам по защите от
+													переувлажнения.
+												</p>
+											</li>
+											<li class="climate__item-output">
+												<picture><source srcset="img/climate/radiator_red.webp" type="image/webp"><img src="img/climate/radiator_red.png" alt="radiator" class="climate__img" /></picture>
+												<p class="climate__text">
+													Потери тепла через 1 м² за отопительный сезон
+													<span class="climate__span">0.00</span> кВт•ч
+												</p>
+											</li>
+											<li class="climate__item-output">
+												<picture><source srcset="img/climate/air_conditioner_red.webp" type="image/webp"><img src="img/climate/air_conditioner_red.png" alt="air" class="climate__img" /></picture>
+												<p class="climate__text">
+													Потери тепла через 1 м² за 1 час при температуре самой холодной
+													пятидневки <span class="climate__span">0.00</span> кВт•ч
+												</p>
+											</li>
+										</ul>
+										<div class="climate__btn-group">
+											<a class="climate__btn btn" href="#">назад</a>
+											<a class="climate__btn btn" href="#">Подтвердить</a>
+										</div>
+
+									</li>
+
+								</ul>
+
+							</form>
+						</div>
+					</section>
+
+				</div>
+				<div class="step-wrapper">
+					<section class="result">
+						<div class="container">
+							<ul class="result__list">
+								<li class="result__item">
+									<h2 class="result__title title title--left">
+										Результат теплотехнического расчёта
+									</h2>
+									<p class="result__text text text--small">
+										Представленный теплотехнический расчет ограждающих конструкций зданий
+										является оценочным и предназначен для предварительного выбора
+										материалов и проектирования конструкций. При разработке проекта для
+										проведения точного расчета необходимо обратиться в организацию,
+										обладающую соответствующими полномочиями и разрешениями.
+									</p>
+								</li>
+								<li class="result__item">
+									<h3 class="result__subtitle subtitle subtitle--bold subtitle--left subtitle--small">
+										Расчет основан на российской нормативной базе:
+									</h3>
+									<ul class="result__sublist">
+										<li class="result__subitem">
+											<p class="result__text text text--small">
+												СНиП 23-02-2003 "Тепловая защита зданий"
+											</p>
+										</li>
+										<li class="result__subitem">
+											<p class="result__text text text--small">
+												СП 23-101-2004 "Проектирование тепловой защиты зданий"
+											</p>
+										</li>
+										<li class="result__subitem">
+											<p class="result__text text text--small">
+												ГОСТ Р 54851—2011 "Конструкции строительные ограждающие
+												неоднородные. Расчет приведенного сопротивления теплопередаче"
+											</p>
+										</li>
+										<li class="result__subitem">
+											<p class="result__text text text--small">
+												СТО 00044807-001-2006 "Теплозащитные свойства ограждающих
+												конструкций зданий"
+											</p>
+										</li>
+									</ul>
+								</li>
+								<li class="result__item">
+									<div class="result__box-wrap">
+										<div class="result__box-inner">
+											<h3 class="result__subtitle subtitle subtitle--left subtitle--small subtitle--bold">
+												Выбранный стеновой материал
+											</h3>
+											<table class="result__table">
+												<thead>
+													<tr>
+														<th>№</th>
+
+														<th class="left">Материал</th>
+														<th>Толщина, мм</th>
+														<th>λ</th>
+														<th>R</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>1.</td>
+														<td class="left">Полистиролбетон 500 кг/м³</td>
+														<td>380</td>
+														<td>0,14</td>
+														<td>2,71</td>
+													</tr>
+													<tr>
+														<td>2.</td>
+														<td class="left">Вентилируемая воздушная прослойка</td>
+														<td>100</td>
+														<td></td>
+														<td>0,00</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="result__box-inner">
+											<h3 class="result__subtitle subtitle subtitle--left subtitle--small subtitle--bold">
+												Основной несущий / самонесущий материал
+											</h3>
+											<div class="result__box-img">
+												<picture><source srcset="img/result/material.webp" type="image/webp"><img src="img/result/material.png" alt="material" class="result__img" /></picture>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="result__item">
+									<h2 class="result__title title title--left title--verify">краткие выводы</h2>
+									<ul class="result__list-result">
+										<li class="result__item-result">
+											<picture><source srcset="img/result/thermometer_green.webp" type="image/webp"><img src="img/result/thermometer_green.png" alt="thermometer" class="result__img" /></picture>
+											<p class="result__text text">
+												Ограждающая конструкция удовлетворяет санитарно-гигиеническим
+												нормам по тепловой защите.
+											</p>
+										</li>
+										<li class="result__item-result">
+											<picture><source srcset="img/result/thermometer_green.webp" type="image/webp"><img src="img/result/thermometer_green.png" alt="thermometer" class="result__img" /></picture>
+											<p class="result__text text">
+												Ограждающая конструкция удовлетворяет нормам по тепловой защите
+												вне зависисмости от иных требований.
+											</p>
+										</li>
+										<li class="result__item-result">
+											<picture><source srcset="img/result/damp_green.webp" type="image/webp"><img src="img/result/damp_green.png" alt="damp" class="result__img" /></picture>
+											<p class="result__text text">
+												Ограждающая конструкция удовлетворяет нормам по защите от
+												переувлажнения.
+											</p>
+										</li>
+										<li class="result__item-result">
+											<picture><source srcset="img/result/radiator_green.webp" type="image/webp"><img src="img/result/radiator_green.png" alt="radiator" class="result__img" /></picture>
+											<p class="result__text text">
+												Потери тепла через 1 м² за отопительный сезон
+												<span class="result__span">7.79</span> кВт•ч
+											</p>
+										</li>
+										<li class="result__item-result">
+											<picture><source srcset="img/result/air_conditioner_green.webp" type="image/webp"><img src="img/result/air_conditioner_green.png" alt="air" class="result__img" /></picture>
+											<p class="result__text text">
+												Потери тепла через 1 м² за 1 час при температуре самой холодной
+												пятидневки <span class="result__span">3.21</span> кВт•ч
+											</p>
+										</li>
+										<li class="result__item-result">
+											<picture><source srcset="img/result/wallet_green.webp" type="image/webp"><img src="img/result/wallet_green.png" alt="wallet" class="result__img" /></picture>
+											<p class="result__text text">
+												Такая тепловая защита оправдана, если энергоноситель для Вашей
+												системы отопления чрезвычайно дорог или Ваша цель - строительство
+												"пассивного" дома.
+											</p>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+					</section>
+
+					<section class="report">
+						<div class="container">
+							<ul class="report__list">
+								<li class="report__item">
+									<h2 class="report__title title title--left title--report">
+										Подробный отчёт
+									</h2>
+									<div class="report__box-wrap">
+										<div class="report__box-inner">
+											<h3 class="report__subtitle subtitle subtitle--left subtitle--small subtitle--bold">
+												Местоположение / Категория сооружения
+											</h3>
+											<table class="report__table">
+												<tbody>
+													<tr>
+														<td class="left">Страна</td>
+														<td class="left">Россия</td>
+													</tr>
+													<tr>
+														<td class="left">Регион</td>
+														<td class="left">Воронежская область</td>
+													</tr>
+													<tr>
+														<td class="left">Населенный пункт</td>
+														<td class="left">Воронеж</td>
+													</tr>
+													<tr>
+														<td class="left">Вид помещения</td>
+														<td class="left">Техническое помещение</td>
+													</tr>
+
+													<tr>
+														<td class="left">Тип конструкции</td>
+														<td class="left">
+															Перекрытие над холодным подвалом, сообщающимся с наружным
+															воздухом
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</li>
+								<li class="report__item">
+									<div class="report__box-wrap">
+										<div class="report__box-inner">
+											<h3 class="report__subtitle subtitle subtitle--left subtitle--small subtitle--bold">
+												Климатические параметры
+											</h3>
+											<table class="report__table">
+												<tbody>
+													<tr>
+														<td class="left">
+															Температура холодной пятидневки с обеспеченностью 0.92
+														</td>
+														<td>-25 ˚С</td>
+													</tr>
+													<tr>
+														<td class="left">Продолжительность отопительного периода</td>
+														<td>205 суток</td>
+													</tr>
+													<tr>
+														<td class="left">
+															Средняя температура воздуха отопительного периода
+														</td>
+														<td>-2.2 ˚С</td>
+													</tr>
+													<tr>
+														<td class="left">Условия эксплуатации помещения</td>
+														<td>Б</td>
+													</tr>
+
+													<tr>
+														<td class="left">
+															Количество градусо-суток отопительного периода (ГСОП)
+														</td>
+														<td>4551 °С•сут</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</li>
+								<li class="report__item">
+									<div class="report__box-wrap">
+										<div class="report__box-inner">
+											<h3 class="report__subtitle subtitle subtitle--left subtitle--small subtitle--bold">
+												Требуемое сопротивление теплопередаче
+											</h3>
+											<table class="report__table">
+												<tbody>
+													<tr>
+														<td class="left">Санитарно-гигиенические требования [Rс]</td>
+														<td>1.55 (м²•˚С)/Вт</td>
+													</tr>
+													<tr>
+														<td class="left">
+															Нормируемое значение поэлементных требований [Rэ]
+														</td>
+														<td>3.16 (м²•˚С)/Вт</td>
+													</tr>
+													<tr>
+														<td class="left">
+															Базовое значение поэлементных требований [Rт]
+														</td>
+														<td>3.95 (м²•˚С)/Вт</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</li>
+
+								<li class="report__item">
+									<div class="report__box-range">
+										<label for="range" class="report__label">Тепловая защита</label>
+										<input type="range" class="report__range range" />
+										<div class="report__span-group">
+											<span class="report__range-span">Rc</span>
+											<span class="report__range-span">Rэ</span>
+											<span class="report__range-span">Rт</span>
+										</div>
+									</div>
+								</li>
+								<li class="report__item">
+									<div class="report__box-wrap">
+										<div class="report__box-inner">
+											<h3 class="report__subtitle subtitle subtitle--left subtitle--small subtitle--bold">
+												Слои конструкции (изнутри наружу)
+											</h3>
+											<table class="report__table report__table--border">
+												<thead>
+													<tr>
+														<th>№</th>
+														<th>Тип</th>
+														<th class="left">Материал</th>
+														<th>Толщина</th>
+														<th>λ</th>
+														<th>R</th>
+														<th>Tmax</th>
+
+														<th>Tmin</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td></td>
+														<td></td>
+														<td class="left">Сопротивление тепловосприятию</td>
+														<td></td>
+														<td></td>
+														<td>0,11</td>
+														<td>+20,0</td>
+
+														<td>+18,8</td>
+													</tr>
+													<tr>
+														<td>1.</td>
+														<td>
+															<picture><source srcset="img/report/kladka.webp" type="image/webp"><img src="img/report/kladka.png" alt="kladka" class="report__table-img" /></picture>
+														</td>
+														<td class="left">Полистиролбетон 500 кг/м³</td>
+														<td>380</td>
+														<td>0,14</td>
+														<td>2,71</td>
+														<td>+18,8</td>
+
+														<td>-9,5</td>
+													</tr>
+													<tr>
+														<td></td>
+														<td></td>
+														<td class="left">Сопротивление теплоотдаче</td>
+														<td></td>
+														<td></td>
+														<td>0,09</td>
+														<td>-10,0</td>
+
+														<td>-10,0</td>
+													</tr>
+													<tr>
+														<td>2.</td>
+														<td>
+															<picture><source srcset="img/report/odnorodnyy.webp" type="image/webp"><img src="img/report/odnorodnyy.png" alt="odnorodnyy" class="report__table-img" /></picture>
+														</td>
+														<td class="left">Вентилируемая воздушная прослойка</td>
+														<td>100</td>
+														<td></td>
+														<td>0,00</td>
+														<td>-9,5</td>
+
+														<td>-10,0</td>
+													</tr>
+												</tbody>
+											</table>
+											<h3 class="report__subtitle subtitle subtitle--left subtitle--small subtitle--bold">
+												Полученные показатели
+											</h3>
+											<table class="report__table report__table--border">
+												<tbody>
+													<tr>
+														<td class="left">
+															Термическое сопротивление ограждающей конструкции [Rк]
+														</td>
+														<td></td>
+														<td></td>
+														<td>2,71</td>
+														<td></td>
+
+														<td></td>
+													</tr>
+
+													<tr>
+														<td class="left">
+															Общее сопротивление теплопередаче ограждающей конструкции
+															[Rо]
+														</td>
+														<td></td>
+														<td></td>
+														<td class="green">2,92</td>
+														<td></td>
+
+														<td></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+
+										<div class="report__box-inner">
+											<h3 class="report__subtitle subtitle subtitle--left subtitle--small subtitle--bold">
+												Сопротивление теплопередаче: 2.92 (м²•˚С)/Вт
+											</h3>
+											<div class="report__wrap">
+												<div class="report__box">
+													<picture><source srcset="img/report/sofa.webp" type="image/webp"><img src="img/report/sofa.png" alt="sofa" class="report__img-span" /></picture>
+													<span class="report__span">Помещение</span>
+												</div>
+												<div class="report__box">
+													<picture><source srcset="img/report/trees.webp" type="image/webp"><img src="img/report/trees.png" alt="trees" class="report__img-span" /></picture>
+													<span class="report__span">Улица</span>
+												</div>
+											</div>
+											<div class="report__wrap">
+												<div class="report__box">
+													<picture><source srcset="img/report/thermometer_1.webp" type="image/webp"><img src="img/report/thermometer_1.png" alt="thermometer" class="report__img-span" /></picture>
+													<span class="report__span">˚C</span>
+												</div>
+												<div class="report__box">
+													<picture><source srcset="img/report/thermometer_2.webp" type="image/webp"><img src="img/report/thermometer_2.png" alt="thermometer" class="report__img-span" /></picture>
+													<span class="report__span">˚C</span>
+												</div>
+											</div>
+											<div class="report__wrap">
+												<picture><source srcset="img/report/grafik1.webp" type="image/webp"><img src="img/report/grafik1.png" alt="grafik" class="report__img-graph" /></picture>
+												<span class="report__span-absolute">см</span>
+											</div>
+											<div class="report__wrap-content">
+												<span class="report__span-data">1</span>
+												<p class="report__text-data">[380мм] Полистиролбетон 250 кг/м³</p>
+											</div>
+											<div class="report__wrap-content report__wrap-content--border">
+												<span class="report__span-data">2</span>
+												<p class="report__text-data">
+													[100мм] Вентилируемая воздушная прослойка
+												</p>
+											</div>
+											<div class="report__wrap-content">
+												<span class="report__span-data report__span-data--black"></span>
+												<p class="report__text-data">Температура</p>
+											</div>
+											<div class="report__wrap-content">
+												<span class="report__span-data report__span-data--blue"></span>
+												<p class="report__text-data">Температура «Точки росы»</p>
+											</div>
+											<div class="report__wrap-content">
+												<span class="report__span-data report__span-data--light-blue"></span>
+												<p class="report__text-data">Зона конденсации</p>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="report__item">
+									<div class="report__box-wrap">
+										<div class="report__box-inner">
+											<h3 class="report__subtitle subtitle subtitle--left subtitle--small subtitle--bold">
+												Защита от переувлажнения «Метод безразмерных величин»
+											</h3>
+											<table class="report__table report__table--border">
+												<thead>
+													<tr>
+														<th class="left">
+															Координата плоскости максимального увлажнения
+														</th>
+														<th>λ</th>
+														<th>784,88</th>
+														<th>мм</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="left">
+															Сопротивление паропроницанию от внутренней поверхности
+															конструкции до плоскости максимального увлажнения
+														</td>
+
+														<td>Rп(в)</td>
+														<td class="blue">9,23</td>
+														<td>(м²•ч•Па)/мг</td>
+													</tr>
+													<tr>
+														<td class="left">
+															Сопротивление паропроницанию от плоскости максимального
+															увлажнения до внешней поверхности конструкции
+														</td>
+														<td>Rп(н)</td>
+														<td>4,20</td>
+														<td>(м²•ч•Па)/мг</td>
+													</tr>
+												</tbody>
+											</table>
+
+											<table class="report__table report__table--border">
+												<tbody>
+													<tr>
+														<td class="left">
+															Условие недопустимости накопления влаги в ограждающей
+															конструкции за годовой период эксплуатации
+														</td>
+														<td>Rп. тр(1)</td>
+														<td class="green">1,23</td>
+														<td>(м²•ч•Па)/мг</td>
+													</tr>
+													<tr>
+														<td class="left">
+															Условие ограничения влаги в ограждающей конструкции за
+															период с отрицательными среднемесячными температурами
+															наружного воздуха
+														</td>
+														<td>Rп. тр(2)</td>
+														<td class="green">0,12</td>
+														<td>(м²•ч•Па)/мг</td>
+													</tr>
+												</tbody>
+											</table>
+											<h3 class="report__subtitle subtitle subtitle--left subtitle--small subtitle--bold">
+												Послойный расчет защиты от переувлажнения
+											</h3>
+											<h3 class="report__subtitle subtitle subtitle--left subtitle--small subtitle--bold">
+												Слои конструкции (изнутри наружу)
+											</h3>
+											<table class="report__table report__table--border">
+												<thead>
+													<tr>
+														<th>№</th>
+														<th class="left">Материал</th>
+														<th>Толщина</th>
+														<th>μ</th>
+														<th>Rп</th>
+														<th>X</th>
+														<th>Rп(в)</th>
+														<th>Rп.тр(1)</th>
+														<th>Rп.тр(2)</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>1.</td>
+														<td class="left">Полистиролбетон 500 кг/м³</td>
+														<td>380</td>
+														<td>0,075</td>
+														<td>5,07</td>
+														<td>255,3</td>
+														<td>3,40</td>
+														<td>0,00</td>
+														<td>0,00</td>
+													</tr>
+													<tr>
+														<td>2.</td>
+														<td class="left">Вентилируемая воздушная прослойка</td>
+														<td>100</td>
+														<td></td>
+														<td>0,00</td>
+														<td>0,0</td>
+														<td>0,00</td>
+														<td>0,00</td>
+														<td>0,00</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+
+										<div class="report__box-inner">
+											<h3 class="report__subtitle subtitle subtitle--left subtitle--small subtitle--bold">
+												Нахождение плоскости максимального увлажнения
+											</h3>
+											<div class="report__wrap">
+												<div class="report__box">
+													<picture><source srcset="img/report/sofa.webp" type="image/webp"><img src="img/report/sofa.png" alt="sofa" class="report__img-span" /></picture>
+													<span class="report__span">Помещение</span>
+												</div>
+												<div class="report__box">
+													<picture><source srcset="img/report/trees.webp" type="image/webp"><img src="img/report/trees.png" alt="trees" class="report__img-span" /></picture>
+													<span class="report__span">Улица</span>
+												</div>
+											</div>
+											<div class="report__wrap">
+												<div class="report__box">
+													<picture><source srcset="img/report/thermometer_1.webp" type="image/webp"><img src="img/report/thermometer_1.png" alt="thermometer" class="report__img-span" /></picture>
+													<span class="report__span">˚C</span>
+												</div>
+												<div class="report__box">
+													<picture><source srcset="img/report/thermometer_2.webp" type="image/webp"><img src="img/report/thermometer_2.png" alt="thermometer" class="report__img-span" /></picture>
+													<span class="report__span">˚C</span>
+												</div>
+											</div>
+											<div class="report__wrap">
+												<div class="report__box">
+													<span class="report__span">Y</span>
+												</div>
+												<div class="report__box">
+													<span class="report__span">Y</span>
+												</div>
+											</div>
+											<div class="report__wrap">
+												<picture><source srcset="img/report/grafik2.webp" type="image/webp"><img src="img/report/grafik2.png" alt="grafik" class="report__img-graph" /></picture>
+												<span class="report__span-absolute">X</span>
+											</div>
+											<div class="report__wrap-content">
+												<span class="report__span-data">1</span>
+												<p class="report__text-data">[380мм] Полистиролбетон 500 кг/м³</p>
+											</div>
+											<div class="report__wrap-content report__wrap-content--border">
+												<span class="report__span-data">2</span>
+												<p class="report__text-data">
+													[100мм] Вентилируемая воздушная прослойка
+												</p>
+											</div>
+											<div class="report__wrap-content">
+												<span class="report__span-data report__span-data--green"></span>
+												<p class="report__text-data">
+													Безразмерное сопротивление паропроницанию
+												</p>
+											</div>
+											<div class="report__wrap-content">
+												<span class="report__span-data report__span-data--blue"></span>
+												<p class="report__text-data">То же насыщенного паром воздуха</p>
+											</div>
+											<div class="report__wrap-content">
+												<span class="report__span-data report__span-data--orange"></span>
+												<p class="report__text-data">
+													Плотность максимального увлажнения
+												</p>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="report__item">
+									<div class="report__box-wrap">
+										<div class="report__box-inner">
+											<h3 class="report__subtitle subtitle subtitle--left subtitle--small subtitle--bold">
+												Потери тепла в час при сопротивлении теплопередаче (Вт•ч)
+											</h3>
+											<table class="report__table report__table--border">
+												<thead>
+													<tr>
+														<th class="left">Сопротивление теплопередаче</th>
+														<th>R</th>
+														<th>±R, %</th>
+														<th>Q</th>
+														<th>±Q, Вт•ч</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="left">Санитарно-гигиенические требования [Rс]</td>
+														<td>1,94</td>
+														<td>+27.06</td>
+														<td>17,40</td>
+														<td>+4.71</td>
+													</tr>
+													<tr>
+														<td class="left">
+															Нормируемое значение поэлементных требований [Rэ]
+														</td>
+														<td>3,16</td>
+														<td>+18.77</td>
+														<td>10,69</td>
+														<td>-2,01</td>
+													</tr>
+													<tr>
+														<td class="left">
+															Базовое значение поэлементных требований [Rт]
+														</td>
+														<td>3.95</td>
+														<td>+48.47</td>
+														<td>8.55</td>
+														<td>-4.14</td>
+													</tr>
+												</tbody>
+											</table>
+
+											<table class="report__table report__table--border">
+												<tbody>
+													<tr>
+														<td class="left">
+															Общее сопротивление теплопередаче ограждающей конструкции
+															[Rо]
+														</td>
+														<td>2,66</td>
+
+														<td>0,00</td>
+														<td>12,69</td>
+														<td>0,00</td>
+													</tr>
+													<tr>
+														<td class="left">R + 10%</td>
+														<td>2,93</td>
+														<td>10,00</td>
+														<td>11,54</td>
+														<td>-1,15</td>
+													</tr>
+													<tr>
+														<td class="left">R + 25%</td>
+														<td>3,32</td>
+														<td>25,00</td>
+														<td>10,15</td>
+														<td>-2,54</td>
+													</tr>
+													<tr>
+														<td class="left">R + 50%</td>
+														<td>3,99</td>
+														<td>50,00</td>
+														<td>8,46</td>
+														<td>-4,23</td>
+													</tr>
+													<tr>
+														<td class="left">R + 100%</td>
+														<td>5,32</td>
+														<td>100,00</td>
+														<td>6,35</td>
+														<td>-6,35</td>
+													</tr>
+												</tbody>
+											</table>
+
+											<h3 class="report__subtitle subtitle subtitle--left subtitle--small subtitle--bold">
+												Полученные показатели
+											</h3>
+											<table class="report__table report__table--border">
+												<tbody>
+													<tr>
+														<td class="left">
+															Потери тепла через 1 м² за отопительный сезон
+														</td>
+														<td>30.81</td>
+														<td>кВт•ч</td>
+													</tr>
+													<tr>
+														<td class="left">
+															Потери тепла через 1 м² за 1 час при температуре самой
+															холодной пятидневки
+														</td>
+														<td>12.69</td>
+														<td>кВт•ч</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+
+										<div class="report__box-inner">
+											<h3 class="report__subtitle subtitle subtitle--left subtitle--small subtitle--bold">
+												Тепловые потери через 1м² ограждающей конструкции
+											</h3>
+											<div class="report__wrap">
+												<div class="report__box">
+													<picture><source srcset="img/report/sofa.webp" type="image/webp"><img src="img/report/sofa.png" alt="sofa" class="report__img-span" /></picture>
+													<span class="report__span">Помещение</span>
+												</div>
+												<div class="report__box">
+													<picture><source srcset="img/report/trees.webp" type="image/webp"><img src="img/report/trees.png" alt="trees" class="report__img-span" /></picture>
+													<span class="report__span">Улица</span>
+												</div>
+											</div>
+
+											<div class="report__wrap">
+												<div class="report__box">
+													<span class="report__span">±Q, Вт•ч</span>
+												</div>
+												<div class="report__box">
+													<span class="report__span">±Q, Вт•ч</span>
+												</div>
+											</div>
+											<div class="report__wrap">
+												<picture><source srcset="img/report/grafik3.webp" type="image/webp"><img src="img/report/grafik3.png" alt="grafik" class="report__img-graph" /></picture>
+												<span class="report__span-absolute">R, (м²•˚C)/Вт</span>
+											</div>
+
+											<div class="report__wrap-content">
+												<span class="report__span-data report__span-data--gray"></span>
+												<p class="report__text-data">
+													Зависимость потерь тепла от сопротивления теплопередачи (R)
+												</p>
+											</div>
+											<div class="report__wrap-content">
+												<p class="report__text-data--bold">
+													Потери тепла при сопротивлении R:
+												</p>
+											</div>
+											<div class="report__wrap-content">
+												<span class="report__span-data report__span-data--orange"></span>
+												<p class="report__text-data">
+													Санитарно гигиенические требования [Rc]
+												</p>
+											</div>
+											<div class="report__wrap-content">
+												<span class="report__span-data report__span-data--blue"></span>
+												<p class="report__text-data">
+													Сопротивление теплопередаче ограждающей конструкции [R]
+												</p>
+											</div>
+											<div class="report__wrap-content">
+												<span class="report__span-data report__span-data--light-blue"></span>
+												<p class="report__text-data">R + 10%</p>
+											</div>
+											<div class="report__wrap-content">
+												<span class="report__span-data report__span-data--dark-green"></span>
+												<p class="report__text-data">
+													Нормируемое значение поэлементных требований [Rэ]
+												</p>
+											</div>
+											<div class="report__wrap-content">
+												<span class="report__span-data report__span-data--light-blue"></span>
+												<p class="report__text-data">R + 25%</p>
+											</div>
+											<div class="report__wrap-content">
+												<span class="report__span-data report__span-data--green"></span>
+												<p class="report__text-data">
+													Базовое значение поэлементных требований [Rт]
+												</p>
+											</div>
+											<div class="report__wrap-content">
+												<span class="report__span-data report__span-data--light-blue"></span>
+												<p class="report__text-data">R + 50%</p>
+											</div>
+										</div>
+									</div>
+									<div class="report__btn-group">
+										<a class="report__btn btn" href="#">назад</a>
+										<a class="report__btn btn btn--width" href="#">Открыть / скачать PDF</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</section>
+
+				</div>
+
+			</form>
+
+
+
+
+		</main>
+
+
+	</div>
+
+	<script src="js/app.min.js?_v=20220806122845"></script>
+</body>
+
+</html>
