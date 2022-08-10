@@ -69,6 +69,7 @@
 		"webpack-stream": "latest"
 	},
 	"dependencies": {
+		"choices.js": "^10.1.0",
 		"simplebar": "latest"
 	}
 }
